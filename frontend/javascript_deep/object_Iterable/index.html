@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://unpkg.com/fxjs/dist/fx.js"></script>
+  </head>
+  <body>
+    ## 객체를 이터러블 프로그래밍으로 다루기
+    <script>
+      //https://github.com/marpple/FxJS
+      const { L, C } = window._;
+
+      const obj1 = {
+        a: 1,
+        b: 2,
+        c: 3,
+        d: 4,
+      };
+
+      console.log(Object.entries(obj1));
+    </script>
+    <br /><br />
+    1.values
+    <script>
+      console.log(Object.values(obj1));
+
+      //generator
+      L.values = function* (obj) {
+        for (const k in obj) {
+          yield obj[k];
+        }
+      };
+
+      _.go(
+        obj1,
+        L.values,
+        _.map((a) => a + 10),
+        L.take(2),
+        _.reduce((a, b) => a + b),
+        console.log
+      );
+    </script>
+    <br /><br />
+    2. entries
+    <script>
+      L.entries = function* (obj) {
+        for (const k in obj) {
+          yield [k, obj[k]];
+        }
+      };
+
+      _.go(
+        obj1,
+        L.entries,
+        L.filter(([_, v]) => v % 2),
+        L.map(([k, v]) => ({ [k]: v })),
+        _.reduce(Object.assign),
+        console.log
+      );
+    </script>
+    <br /><br />
+    3. keys
+    <script>
+      L.keys = function* (obj) {
+        for (const k in obj) {
+          yield k;
+        }
+      };
+
+      _.go(obj1, L.keys, _.each(console.log));
+    </script>
+    <br /><br />
+    4. 어떠한 값이든 이터러블 프로그래밍으로 다루기 - 이터러블로 이터러블
+    프로그래밍 - 객체를 제너레이터를 이용해서 이터레이토로 만들어서 이터러블
+    프로그래밍 - 어떤 제너레이터든 이터레이터로 만들어서 이터러블 프로그래밍
+
+    <script>
+      const g1 = function* (stop) {
+        let i = -1;
+        while (++i < stop) {
+          yield 10;
+          if (false) yield 20 + 30;
+          yield 30;
+        }
+      };
+      console.log(...L.take(3, [...g1(3)]));
+      // _.each(console.log, g1(10));
+      _.go(
+        g1(10),
+        L.take(2),
+        _.reduce((a, b) => a + b),
+        console.log
+      );
+    </script>
+    <br /><br />
+    5. object
+    <script>
+      const a = [
+        ["a", 1],
+        ["b", 2],
+        ["c", 3],
+      ];
+      const b = {
+        a: 1,
+        b: 2,
+        c: 3,
+      };
+
+      // const object = (entries) =>
+      //   _.go(
+      //     entries,
+      //     L.map(([k, v]) => ({ [k]: v })),
+      //     _.reduce(Object.assign)
+      //   );
+
+      const object = (entries) =>
+        _.reduce((obj, [k, v]) => ((obj[k] = v), obj), {}, entries);
+      console.log(object(a));
+      console.log(object(L.entries({ b: 2, c: 3 })));
+
+      let m = new Map(); //js 내장값 , 사용자정의객체 -> Iterable 가능
+      m.set("a", 10);
+      m.set("b", 20);
+      m.set("c", 30);
+      console.log(object(m));
+    </script>
+    <br /><br />
+    6. mapObject
+
+    <script>
+      const mapObject = (f, obj) =>
+        _.go(
+          obj,
+          L.entries,
+          L.map(([k, v]) => [k, f(v)]),
+          object
+        );
+
+      console.log(mapObject((a) => a + 10, { a: 1, b: 2, c: 3 }));
+      // [['a',1],['b',2],['c',3]]
+      // [['a',11],['b',12],['c',13]]
+      // {a:11}...
+      // {a:1,b:2,c:3}
+
+      console.clear();
+    </script>
+    <br /><br />
+    7. pick
+    <script>
+      const obj2 = { a: 1, b: 2, c: 3, d: 4, e: 5 };
+
+      const pick = (ks, obj) =>
+        _.go(
+          ks,
+          L.map((k) => [k, obj[k]]),
+          L.reject(([k, v]) => v === undefined),
+          object
+        );
+      //const pick = (ks, obj) => object(_.map((k) => [k, obj[k]], ks));
+      console.log(pick(["b", "c"], obj2)); //{b:2,c:3}
+      console.log(pick(["b", "c", "z"], obj2)); //z:undefined
+    </script>
+    <br /><br />
+    8. indexBy
+    <script>
+      const users = [
+        { id: 5, name: "AA", age: 35 },
+        { id: 10, name: "BB", age: 26 },
+        { id: 19, name: "CC", age: 28 },
+        { id: 23, name: "CC", age: 34 },
+        { id: 24, name: "EE", age: 23 },
+      ];
+
+      const users2 = _.indexBy((u) => u.id, users);
+      console.log("IndexBy", users2); //id:{} key:value가지게됨
+      //_.indexBy = (f,iter)=> _.reduce((obj,a)=>(obj[f(a)]=a,obj),{},iter)
+    </script>
+    <br /><br />
+    9. indexBy 된 값을 filter하기
+    <script>
+      console.log(_.filter(({ age }) => age >= 30, users));
+      console.log(_.filter(({ age }) => age >= 30, users2));
+      //key:{} 쌍으로 돼있는것은 filterXX
+
+      const users3 = _.go(
+        users2,
+        L.entries,
+        L.filter(([_, { age }]) => age < 30), //key무시, age로만 Filter
+        L.take(2),
+        object
+      );
+      console.log(users3[19]);
+    </script>
+  </body>
+</html>

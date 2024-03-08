@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<!-- saved from url=(0138)https://www.inflearn.com/course/lecture?courseSlug=%EB%94%B0%EB%9D%BC%ED%95%98%EB%A9%B0-%EB%B0%B0%EC%9A%B0%EB%8A%94-html-css&unitId=136344 -->
+<html lang="ko" style="--vh: 9.59px;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">:root, :host {
+  --fa-font-solid: normal 900 1em/1 "Font Awesome 6 Solid";
+  --fa-font-regular: normal 400 1em/1 "Font Awesome 6 Regular";
+  --fa-font-light: normal 300 1em/1 "Font Awesome 6 Light";
+  --fa-font-thin: normal 100 1em/1 "Font Awesome 6 Thin";
+  --fa-font-duotone: normal 900 1em/1 "Font Awesome 6 Duotone";
+  --fa-font-sharp-solid: normal 900 1em/1 "Font Awesome 6 Sharp";
+  --fa-font-sharp-regular: normal 400 1em/1 "Font Awesome 6 Sharp";
+  --fa-font-sharp-light: normal 300 1em/1 "Font Awesome 6 Sharp";
+  --fa-font-brands: normal 400 1em/1 "Font Awesome 6 Brands";
+}
+
+svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
+  overflow: visible;
+  box-sizing: content-box;
+}
+
+.svg-inline--fa {
+  display: var(--fa-display, inline-block);
+  height: 1em;
+  overflow: visible;
+  vertical-align: -0.125em;
+}
+.svg-inline--fa.fa-2xs {
+  vertical-align: 0.1em;
+}
+.svg-inline--fa.fa-xs {
+  vertical-align: 0em;
+}
+.svg-inline--fa.fa-sm {
+  vertical-align: -0.0714285705em;
+}
+.svg-inline--fa.fa-lg {
+  vertical-align: -0.2em;
+}
+.svg-inline--fa.fa-xl {
+  vertical-align: -0.25em;
+}
+.svg-inline--fa.fa-2xl {
+  vertical-align: -0.3125em;
+}
+.svg-inline--fa.fa-pull-left {
+  margin-right: var(--fa-pull-margin, 0.3em);
+  width: auto;
+}
+.svg-inline--fa.fa-pull-right {
+  margin-left: var(--fa-pull-margin, 0.3em);
+  width: auto;
+}
+.svg-inline--fa.fa-li {
+  width: var(--fa-li-width, 2em);
+  top: 0.25em;
+}
+.svg-inline--fa.fa-fw {
+  width: var(--fa-fw-width, 1.25em);
+}
+
+.fa-layers svg.svg-inline--fa {
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.fa-layers-counter, .fa-layers-text {
+  display: inline-block;
+  position: absolute;
+  text-align: center;
+}
+
+.fa-layers {
+  display: inline-block;
+  height: 1em;
+  position: relative;
+  text-align: center;
+  vertical-align: -0.125em;
+  width: 1em;
+}
+.fa-layers svg.svg-inline--fa {
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+}
+
+.fa-layers-text {
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+}
+
+.fa-layers-counter {
+  background-color: var(--fa-counter-background-color, #ff253a);
+  border-radius: var(--fa-counter-border-radius, 1em);
+  box-sizing: border-box;
+  color: var(--fa-inverse, #fff);
+  line-height: var(--fa-counter-line-height, 1);
+  max-width: var(--fa-counter-max-width, 5em);
+  min-width: var(--fa-counter-min-width, 1.5em);
+  overflow: hidden;
+  padding: var(--fa-counter-padding, 0.25em 0.5em);
+  right: var(--fa-right, 0);
+  text-overflow: ellipsis;
+  top: var(--fa-top, 0);
+  -webkit-transform: scale(var(--fa-counter-scale, 0.25));
+          transform: scale(var(--fa-counter-scale, 0.25));
+  -webkit-transform-origin: top right;
+          transform-origin: top right;
+}
+
+.fa-layers-bottom-right {
+  bottom: var(--fa-bottom, 0);
+  right: var(--fa-right, 0);
+  top: auto;
+  -webkit-transform: scale(var(--fa-layers-scale, 0.25));
+          transform: scale(var(--fa-layers-scale, 0.25));
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
+}
+
+.fa-layers-bottom-left {
+  bottom: var(--fa-bottom, 0);
+  left: var(--fa-left, 0);
+  right: auto;
+  top: auto;
+  -webkit-transform: scale(var(--fa-layers-scale, 0.25));
+          transform: scale(var(--fa-layers-scale, 0.25));
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+}
+
+.fa-layers-top-right {
+  top: var(--fa-top, 0);
+  right: var(--fa-right, 0);
+  -webkit-transform: scale(var(--fa-layers-scale, 0.25));
+          transform: scale(var(--fa-layers-scale, 0.25));
+  -webkit-transform-origin: top right;
+          transform-origin: top right;
+}
+
+.fa-layers-top-left {
+  left: var(--fa-left, 0);
+  right: auto;
+  top: var(--fa-top, 0);
+  -webkit-transform: scale(var(--fa-layers-scale, 0.25));
+          transform: scale(var(--fa-layers-scale, 0.25));
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+}
+
+.fa-1x {
+  font-size: 1em;
+}
+
+.fa-2x {
+  font-size: 2em;
+}
+
+.fa-3x {
+  font-size: 3em;
+}
+
+.fa-4x {
+  font-size: 4em;
+}
+
+.fa-5x {
+  font-size: 5em;
+}
+
+.fa-6x {
+  font-size: 6em;
+}
+
+.fa-7x {
+  font-size: 7em;
+}
+
+.fa-8x {
+  font-size: 8em;
+}
+
+.fa-9x {
+  font-size: 9em;
+}
+
+.fa-10x {
+  font-size: 10em;
+}
+
+.fa-2xs {
+  font-size: 0.625em;
+  line-height: 0.1em;
+  vertical-align: 0.225em;
+}
+
+.fa-xs {
+  font-size: 0.75em;
+  line-height: 0.0833333337em;
+  vertical-align: 0.125em;
+}
+
+.fa-sm {
+  font-size: 0.875em;
+  line-height: 0.0714285718em;
+  vertical-align: 0.0535714295em;
+}
+
+.fa-lg {
+  font-size: 1.25em;
+  line-height: 0.05em;
+  vertical-align: -0.075em;
+}
+
+.fa-xl {
+  font-size: 1.5em;
+  line-height: 0.0416666682em;
+  vertical-align: -0.125em;
+}
+
+.fa-2xl {
+  font-size: 2em;
+  line-height: 0.03125em;
+  vertical-align: -0.1875em;
+}
+
+.fa-fw {
+  text-align: center;
+  width: 1.25em;
+}
+
+.fa-ul {
+  list-style-type: none;
+  margin-left: var(--fa-li-margin, 2.5em);
+  padding-left: 0;
+}
+.fa-ul > li {
+  position: relative;
+}
+
+.fa-li {
+  left: calc(var(--fa-li-width, 2em) * -1);
+  position: absolute;
+  text-align: center;
+  width: var(--fa-li-width, 2em);
+  line-height: inherit;
+}
+
+.fa-border {
+  border-color: var(--fa-border-color, #eee);
+  border-radius: var(--fa-border-radius, 0.1em);
+  border-style: var(--fa-border-style, solid);
+  border-width: var(--fa-border-width, 0.08em);
+  padding: var(--fa-border-padding, 0.2em 0.25em 0.15em);
+}
+
+.fa-pull-left {
+  float: left;
+  margin-right: var(--fa-pull-margin, 0.3em);
+}
+
+.fa-pull-right {
+  float: right;
+  margin-left: var(--fa-pull-margin, 0.3em);
+}
+
+.fa-beat {
+  -webkit-animation-name: fa-beat;
+          animation-name: fa-beat;
+  -webkit-animation-delay: var(--fa-animation-delay, 0s);
+          animation-delay: var(--fa-animation-delay, 0s);
+  -webkit-animation-direction: var(--fa-animation-direction, normal);
+          animation-direction: var(--fa-animation-direction, normal);
+  -webkit-animation-duration: var(--fa-animation-duration, 1s);
+          animation-duration: var(--fa-animation-duration, 1s);
+  -webkit-animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+          animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  -webkit-animation-timing-function: var(--fa-animation-timing, ease-in-out);
+          animation-timing-function: var(--fa-animation-timing, ease-in-out);
+}
+
+.fa-bounce {
+  -webkit-animation-name: fa-bounce;
+          animation-name: fa-bounce;
+  -webkit-animation-delay: var(--fa-animation-delay, 0s);
+          animation-delay: var(--fa-animation-delay, 0s);
+  -webkit-animation-direction: var(--fa-animation-direction, normal);
+          animation-direction: var(--fa-animation-direction, normal);
+  -webkit-animation-duration: var(--fa-animation-duration, 1s);
+          animation-duration: var(--fa-animation-duration, 1s);
+  -webkit-animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+          animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  -webkit-animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.28, 0.84, 0.42, 1));
+          animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.28, 0.84, 0.42, 1));
+}
+
+.fa-fade {
+  -webkit-animation-name: fa-fade;
+          animation-name: fa-fade;
+  -webkit-animation-delay: var(--fa-animation-delay, 0s);
+          animation-delay: var(--fa-animation-delay, 0s);
+  -webkit-animation-direction: var(--fa-animation-direction, normal);
+          animation-direction: var(--fa-animation-direction, normal);
+  -webkit-animation-duration: var(--fa-animation-duration, 1s);
+          animation-duration: var(--fa-animation-duration, 1s);
+  -webkit-animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+          animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  -webkit-animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.4, 0, 0.6, 1));
+          animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.4, 0, 0.6, 1));
+}
+
+.fa-beat-fade {
+  -webkit-animation-name: fa-beat-fade;
+          animation-name: fa-beat-fade;
+  -webkit-animation-delay: var(--fa-animation-delay, 0s);
+          animation-delay: var(--fa-animation-delay, 0s);
+  -webkit-animation-direction: var(--fa-animation-direction, normal);
+          animation-direction: var(--fa-animation-direction, normal);
+  -webkit-animation-duration: var(--fa-animation-duration, 1s);
+          animation-duration: var(--fa-animation-duration, 1s);
+  -webkit-animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+          animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  -webkit-animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.4, 0, 0.6, 1));
+          animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.4, 0, 0.6, 1));
+}
+
+.fa-flip {
+  -webkit-animation-name: fa-flip;
+          animation-name: fa-flip;
+  -webkit-animation-delay: var(--fa-animation-delay, 0s);
+          animation-delay: var(--fa-animation-delay, 0s);
+  -webkit-animation-direction: var(--fa-animation-direction, normal);
+          animation-direction: var(--fa-animation-direction, normal);
+  -webkit-animation-duration: var(--fa-animation-duration, 1s);
+          animation-duration: var(--fa-animation-duration, 1s);
+  -webkit-animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+          animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  -webkit-animation-timing-function: var(--fa-animation-timing, ease-in-out);
+          animation-timing-function: var(--fa-animation-timing, ease-in-out);
+}
+
+.fa-shake {
+  -webkit-animation-name: fa-shake;
+          animation-name: fa-shake;
+  -webkit-animation-delay: var(--fa-animation-delay, 0s);
+          animation-delay: var(--fa-animation-delay, 0s);
+  -webkit-animation-direction: var(--fa-animation-direction, normal);
+          animation-direction: var(--fa-animation-direction, normal);
+  -webkit-animation-duration: var(--fa-animation-duration, 1s);
+          animation-duration: var(--fa-animation-duration, 1s);
+  -webkit-animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+          animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  -webkit-animation-timing-function: var(--fa-animation-timing, linear);
+          animation-timing-function: var(--fa-animation-timing, linear);
+}
+
+.fa-spin {
+  -webkit-animation-name: fa-spin;
+          animation-name: fa-spin;
+  -webkit-animation-delay: var(--fa-animation-delay, 0s);
+          animation-delay: var(--fa-animation-delay, 0s);
+  -webkit-animation-direction: var(--fa-animation-direction, normal);
+          animation-direction: var(--fa-animation-direction, normal);
+  -webkit-animation-duration: var(--fa-animation-duration, 2s);
+          animation-duration: var(--fa-animation-duration, 2s);
+  -webkit-animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+          animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  -webkit-animation-timing-function: var(--fa-animation-timing, linear);
+          animation-timing-function: var(--fa-animation-timing, linear);
+}
+
+.fa-spin-reverse {
+  --fa-animation-direction: reverse;
+}
+
+.fa-pulse,
+.fa-spin-pulse {
+  -webkit-animation-name: fa-spin;
+          animation-name: fa-spin;
+  -webkit-animation-direction: var(--fa-animation-direction, normal);
+          animation-direction: var(--fa-animation-direction, normal);
+  -webkit-animation-duration: var(--fa-animation-duration, 1s);
+          animation-duration: var(--fa-animation-duration, 1s);
+  -webkit-animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+          animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  -webkit-animation-timing-function: var(--fa-animation-timing, steps(8));
+          animation-timing-function: var(--fa-animation-timing, steps(8));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fa-beat,
+.fa-bounce,
+.fa-fade,
+.fa-beat-fade,
+.fa-flip,
+.fa-pulse,
+.fa-shake,
+.fa-spin,
+.fa-spin-pulse {
+    -webkit-animation-delay: -1ms;
+            animation-delay: -1ms;
+    -webkit-animation-duration: 1ms;
+            animation-duration: 1ms;
+    -webkit-animation-iteration-count: 1;
+            animation-iteration-count: 1;
+    -webkit-transition-delay: 0s;
+            transition-delay: 0s;
+    -webkit-transition-duration: 0s;
+            transition-duration: 0s;
+  }
+}
+@-webkit-keyframes fa-beat {
+  0%, 90% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  45% {
+    -webkit-transform: scale(var(--fa-beat-scale, 1.25));
+            transform: scale(var(--fa-beat-scale, 1.25));
+  }
+}
+@keyframes fa-beat {
+  0%, 90% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  45% {
+    -webkit-transform: scale(var(--fa-beat-scale, 1.25));
+            transform: scale(var(--fa-beat-scale, 1.25));
+  }
+}
+@-webkit-keyframes fa-bounce {
+  0% {
+    -webkit-transform: scale(1, 1) translateY(0);
+            transform: scale(1, 1) translateY(0);
+  }
+  10% {
+    -webkit-transform: scale(var(--fa-bounce-start-scale-x, 1.1), var(--fa-bounce-start-scale-y, 0.9)) translateY(0);
+            transform: scale(var(--fa-bounce-start-scale-x, 1.1), var(--fa-bounce-start-scale-y, 0.9)) translateY(0);
+  }
+  30% {
+    -webkit-transform: scale(var(--fa-bounce-jump-scale-x, 0.9), var(--fa-bounce-jump-scale-y, 1.1)) translateY(var(--fa-bounce-height, -0.5em));
+            transform: scale(var(--fa-bounce-jump-scale-x, 0.9), var(--fa-bounce-jump-scale-y, 1.1)) translateY(var(--fa-bounce-height, -0.5em));
+  }
+  50% {
+    -webkit-transform: scale(var(--fa-bounce-land-scale-x, 1.05), var(--fa-bounce-land-scale-y, 0.95)) translateY(0);
+            transform: scale(var(--fa-bounce-land-scale-x, 1.05), var(--fa-bounce-land-scale-y, 0.95)) translateY(0);
+  }
+  57% {
+    -webkit-transform: scale(1, 1) translateY(var(--fa-bounce-rebound, -0.125em));
+            transform: scale(1, 1) translateY(var(--fa-bounce-rebound, -0.125em));
+  }
+  64% {
+    -webkit-transform: scale(1, 1) translateY(0);
+            transform: scale(1, 1) translateY(0);
+  }
+  100% {
+    -webkit-transform: scale(1, 1) translateY(0);
+            transform: scale(1, 1) translateY(0);
+  }
+}
+@keyframes fa-bounce {
+  0% {
+    -webkit-transform: scale(1, 1) translateY(0);
+            transform: scale(1, 1) translateY(0);
+  }
+  10% {
+    -webkit-transform: scale(var(--fa-bounce-start-scale-x, 1.1), var(--fa-bounce-start-scale-y, 0.9)) translateY(0);
+            transform: scale(var(--fa-bounce-start-scale-x, 1.1), var(--fa-bounce-start-scale-y, 0.9)) translateY(0);
+  }
+  30% {
+    -webkit-transform: scale(var(--fa-bounce-jump-scale-x, 0.9), var(--fa-bounce-jump-scale-y, 1.1)) translateY(var(--fa-bounce-height, -0.5em));
+            transform: scale(var(--fa-bounce-jump-scale-x, 0.9), var(--fa-bounce-jump-scale-y, 1.1)) translateY(var(--fa-bounce-height, -0.5em));
+  }
+  50% {
+    -webkit-transform: scale(var(--fa-bounce-land-scale-x, 1.05), var(--fa-bounce-land-scale-y, 0.95)) translateY(0);
+            transform: scale(var(--fa-bounce-land-scale-x, 1.05), var(--fa-bounce-land-scale-y, 0.95)) translateY(0);
+  }
+  57% {
+    -webkit-transform: scale(1, 1) translateY(var(--fa-bounce-rebound, -0.125em));
+            transform: scale(1, 1) translateY(var(--fa-bounce-rebound, -0.125em));
+  }
+  64% {
+    -webkit-transform: scale(1, 1) translateY(0);
+            transform: scale(1, 1) translateY(0);
+  }
+  100% {
+    -webkit-transform: scale(1, 1) translateY(0);
+            transform: scale(1, 1) translateY(0);
+  }
+}
+@-webkit-keyframes fa-fade {
+  50% {
+    opacity: var(--fa-fade-opacity, 0.4);
+  }
+}
+@keyframes fa-fade {
+  50% {
+    opacity: var(--fa-fade-opacity, 0.4);
+  }
+}
+@-webkit-keyframes fa-beat-fade {
+  0%, 100% {
+    opacity: var(--fa-beat-fade-opacity, 0.4);
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    -webkit-transform: scale(var(--fa-beat-fade-scale, 1.125));
+            transform: scale(var(--fa-beat-fade-scale, 1.125));
+  }
+}
+@keyframes fa-beat-fade {
+  0%, 100% {
+    opacity: var(--fa-beat-fade-opacity, 0.4);
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    -webkit-transform: scale(var(--fa-beat-fade-scale, 1.125));
+            transform: scale(var(--fa-beat-fade-scale, 1.125));
+  }
+}
+@-webkit-keyframes fa-flip {
+  50% {
+    -webkit-transform: rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), var(--fa-flip-angle, -180deg));
+            transform: rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), var(--fa-flip-angle, -180deg));
+  }
+}
+@keyframes fa-flip {
+  50% {
+    -webkit-transform: rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), var(--fa-flip-angle, -180deg));
+            transform: rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), var(--fa-flip-angle, -180deg));
+  }
+}
+@-webkit-keyframes fa-shake {
+  0% {
+    -webkit-transform: rotate(-15deg);
+            transform: rotate(-15deg);
+  }
+  4% {
+    -webkit-transform: rotate(15deg);
+            transform: rotate(15deg);
+  }
+  8%, 24% {
+    -webkit-transform: rotate(-18deg);
+            transform: rotate(-18deg);
+  }
+  12%, 28% {
+    -webkit-transform: rotate(18deg);
+            transform: rotate(18deg);
+  }
+  16% {
+    -webkit-transform: rotate(-22deg);
+            transform: rotate(-22deg);
+  }
+  20% {
+    -webkit-transform: rotate(22deg);
+            transform: rotate(22deg);
+  }
+  32% {
+    -webkit-transform: rotate(-12deg);
+            transform: rotate(-12deg);
+  }
+  36% {
+    -webkit-transform: rotate(12deg);
+            transform: rotate(12deg);
+  }
+  40%, 100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+@keyframes fa-shake {
+  0% {
+    -webkit-transform: rotate(-15deg);
+            transform: rotate(-15deg);
+  }
+  4% {
+    -webkit-transform: rotate(15deg);
+            transform: rotate(15deg);
+  }
+  8%, 24% {
+    -webkit-transform: rotate(-18deg);
+            transform: rotate(-18deg);
+  }
+  12%, 28% {
+    -webkit-transform: rotate(18deg);
+            transform: rotate(18deg);
+  }
+  16% {
+    -webkit-transform: rotate(-22deg);
+            transform: rotate(-22deg);
+  }
+  20% {
+    -webkit-transform: rotate(22deg);
+            transform: rotate(22deg);
+  }
+  32% {
+    -webkit-transform: rotate(-12deg);
+            transform: rotate(-12deg);
+  }
+  36% {
+    -webkit-transform: rotate(12deg);
+            transform: rotate(12deg);
+  }
+  40%, 100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+@-webkit-keyframes fa-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes fa-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+.fa-rotate-90 {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.fa-rotate-180 {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.fa-rotate-270 {
+  -webkit-transform: rotate(270deg);
+          transform: rotate(270deg);
+}
+
+.fa-flip-horizontal {
+  -webkit-transform: scale(-1, 1);
+          transform: scale(-1, 1);
+}
+
+.fa-flip-vertical {
+  -webkit-transform: scale(1, -1);
+          transform: scale(1, -1);
+}
+
+.fa-flip-both,
+.fa-flip-horizontal.fa-flip-vertical {
+  -webkit-transform: scale(-1, -1);
+          transform: scale(-1, -1);
+}
+
+.fa-rotate-by {
+  -webkit-transform: rotate(var(--fa-rotate-angle, none));
+          transform: rotate(var(--fa-rotate-angle, none));
+}
+
+.fa-stack {
+  display: inline-block;
+  vertical-align: middle;
+  height: 2em;
+  position: relative;
+  width: 2.5em;
+}
+
+.fa-stack-1x,
+.fa-stack-2x {
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: var(--fa-stack-z-index, auto);
+}
+
+.svg-inline--fa.fa-stack-1x {
+  height: 1em;
+  width: 1.25em;
+}
+.svg-inline--fa.fa-stack-2x {
+  height: 2em;
+  width: 2.5em;
+}
+
+.fa-inverse {
+  color: var(--fa-inverse, #fff);
+}
+
+.sr-only,
+.fa-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.sr-only-focusable:not(:focus),
+.fa-sr-only-focusable:not(:focus) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.svg-inline--fa .fa-primary {
+  fill: var(--fa-primary-color, currentColor);
+  opacity: var(--fa-primary-opacity, 1);
+}
+
+.svg-inline--fa .fa-secondary {
+  fill: var(--fa-secondary-color, currentColor);
+  opacity: var(--fa-secondary-opacity, 0.4);
+}
+
+.svg-inline--fa.fa-swap-opacity .fa-primary {
+  opacity: var(--fa-secondary-opacity, 0.4);
+}
+
+.svg-inline--fa.fa-swap-opacity .fa-secondary {
+  opacity: var(--fa-primary-opacity, 1);
+}
+
+.svg-inline--fa mask .fa-primary,
+.svg-inline--fa mask .fa-secondary {
+  fill: black;
+}
+
+.fad.fa-inverse,
+.fa-duotone.fa-inverse {
+  color: var(--fa-inverse, #fff);
+}</style><style data-emotion="mantine" data-s=""></style><link rel="preconnect" href="https://vod.inflearn.com/"><link rel="icon" type="image/svg+xml" href="https://cdn.inflearn.com/monolith/lecture/assets/favicon-e01896f8.ico"><meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1,user-scalable=no"><title>따라하며 배우는 HTML, CSS | 학습 페이지</title><script type="text/javascript" async="" src="./따라하며 배우는 HTML, CSS _ 학습 페이지_files/mixpanel-2-latest.min.js"></script><script type="text/javascript" async="" src="./따라하며 배우는 HTML, CSS _ 학습 페이지_files/mixpanel-js-wrapper.js"></script><script async="" src="./따라하며 배우는 HTML, CSS _ 학습 페이지_files/uwt.js"></script><script src="./따라하며 배우는 HTML, CSS _ 학습 페이지_files/441896424280799" async=""></script><script async="" src="./따라하며 배우는 HTML, CSS _ 학습 페이지_files/fbevents.js"></script><script src="./따라하며 배우는 HTML, CSS _ 학습 페이지_files/AceCounter_AW.js"></script><script type="text/javascript" async="" src="./따라하며 배우는 HTML, CSS _ 학습 페이지_files/hotjar-1070825.js"></script><script type="text/javascript" async="" src="./따라하며 배우는 HTML, CSS _ 학습 페이지_files/analytics.js"></script><script type="text/javascript" async="" src="./따라하며 배우는 HTML, CSS _ 학습 페이지_files/hotjar-1039300.js"></script><script type="text/javascript" async="" src="./따라하며 배우는 HTML, CSS _ 학습 페이지_files/insight.min.js"></script><script type="text/javascript" async="" src="./따라하며 배우는 HTML, CSS _ 학습 페이지_files/js"></script><script async="" src="./따라하며 배우는 HTML, CSS _ 학습 페이지_files/gtm.js"></script><script type="module" crossorigin="" src="./따라하며 배우는 HTML, CSS _ 학습 페이지_files/index-ecbc606e.js"></script><link rel="stylesheet" href="./따라하며 배우는 HTML, CSS _ 학습 페이지_files/build-b1d64f9c.css"><style data-emotion="css-global" data-s=""></style><style data-emotion="css-global" data-s=""></style><style data-emotion="css-global" data-s=""></style><style data-emotion="css-global" data-s=""></style><style data-emotion="css-global" data-s=""></style><style data-emotion="css-global" data-s=""></style><style data-emotion="css-global" data-s=""></style><style data-emotion="css-global" data-s=""></style><style data-emotion="css-global" data-s=""></style><style data-emotion="css-global" data-s=""></style><style data-emotion="css" data-s=""></style><meta http-equiv="origin-trial" content="AymqwRC7u88Y4JPvfIF2F37QKylC04248hLCdJAsh8xgOfe/dVJPV3XS3wLFca1ZMVOtnBfVjaCMTVudWM//5g4AAAB7eyJvcmlnaW4iOiJodHRwczovL3d3dy5nb29nbGV0YWdtYW5hZ2VyLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjk1MTY3OTk5LCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A4oIpR6f5aUXFRMbL6t6qaMk4lrHWxcV3DcrzORsA9sEsIk1FBRMFzzhfMNLuUpokZH40FV8s7iiXtt/729v8A4AAACFeyJvcmlnaW4iOiJodHRwczovL3d3dy5nb29nbGV0YWdtYW5hZ2VyLmNvbTo0NDMiLCJmZWF0dXJlIjoiQXR0cmlidXRpb25SZXBvcnRpbmdDcm9zc0FwcFdlYiIsImV4cGlyeSI6MTcxNDUyMTU5OSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><script attributionsrc="" type="text/javascript" async="" src="./따라하며 배우는 HTML, CSS _ 학습 페이지_files/f.txt"></script><script type="text/javascript" async="" src="./따라하며 배우는 HTML, CSS _ 학습 페이지_files/f(1).txt"></script><script type="text/javascript" async="" src="./따라하며 배우는 HTML, CSS _ 학습 페이지_files/f(2).txt"></script><meta http-equiv="origin-trial" content="AymqwRC7u88Y4JPvfIF2F37QKylC04248hLCdJAsh8xgOfe/dVJPV3XS3wLFca1ZMVOtnBfVjaCMTVudWM//5g4AAAB7eyJvcmlnaW4iOiJodHRwczovL3d3dy5nb29nbGV0YWdtYW5hZ2VyLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjk1MTY3OTk5LCJpc1RoaXJkUGFydHkiOnRydWV9"><link rel="modulepreload" as="script" crossorigin="" href="https://cdn.inflearn.com/monolith/lecture/assets/DesktopCourse-ae016112.js"><link rel="modulepreload" as="script" crossorigin="" href="https://cdn.inflearn.com/monolith/lecture/assets/canViewContent-df424c4e.js"><link rel="stylesheet" href="./따라하며 배우는 HTML, CSS _ 학습 페이지_files/canViewContent-11a542c1.css"><script async="" src="./따라하며 배우는 HTML, CSS _ 학습 페이지_files/modules.fd7a1c20a85f7a95e5ff.js" charset="utf-8"></script><meta name="robots" content="noindex" data-rh="true"></head><body data-new-gr-c-s-check-loaded="14.1153.0" data-gr-ext-installed=""><div id="root"><main class="css-ydv0ye mantine-1avyp1d"><div class="css-w7yv11 mantine-1avyp1d"><header class="css-hxhp83"><div class="css-1ok7bvp"><a href="https://www.inflearn.com/course/%EB%94%B0%EB%9D%BC%ED%95%98%EB%A9%B0-%EB%B0%B0%EC%9A%B0%EB%8A%94-html-css/dashboard" class="css-f032mp"><span class="css-3h0hpn"><svg width="14" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14"><title>LinkIcon</title><path fill="#ffffff" fill-rule="evenodd" d="M12.031 7h-.437c-.121 0-.219.098-.219.219v5.468c0 .242-.196.438-.438.438H1.313c-.242 0-.438-.196-.438-.438V3.063c0-.242.196-.438.438-.438H6.78c.121 0 .219-.098.219-.219V1.97c0-.121-.098-.219-.219-.219H1.313C.588 1.75 0 2.338 0 3.063v9.624C0 13.412.588 14 1.313 14h9.624c.725 0 1.313-.588 1.313-1.313V7.22c0-.121-.098-.219-.219-.219zm1.64-7L9.954.01c-.181 0-.328.146-.328.327v.274c0 .181.147.328.328.328l2.461-.01.02.02-8.838 8.836c-.062.062-.097.145-.097.233 0 .087.035.17.097.232l.155.155c.061.062.145.096.232.096.087 0 .171-.034.233-.096l8.835-8.837.02.019-.01 2.461c0 .181.147.328.328.328h.274c.18 0 .328-.147.328-.328L14 .328C14 .147 13.853 0 13.672 0z"></path></svg></span><span>강의 대시보드</span></a><p class="css-1vtpfoe">Grid CSS</p></div><div class="css-1b1bmty"><div class="mantine-Group-root mantine-1pd0ewr"><button class="mantine-UnstyledButton-root mantine-Button-root mantine-ff0ic2" type="button" data-button="true"><div class="mantine-1yjkc96 mantine-Button-inner"><span class="mantine-Button-icon mantine-Button-leftIcon mantine-19ok7fu"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bell-slash" class="svg-inline--fa fa-bell-slash " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" style="font-size: 16px; color: inherit;"><path fill="currentColor" d="M38.8 5.1C28.4-3.1 13.3-1.2 5.1 9.2S-1.2 34.7 9.2 42.9l592 464c10.4 8.2 25.5 6.3 33.7-4.1s6.3-25.5-4.1-33.7l-87.5-68.6c.5-1.7 .7-3.5 .7-5.4c0-27.6-11-54.1-30.5-73.7L512 320c-20.5-20.5-32-48.3-32-77.3V208c0-77.4-55-142-128-156.8V32c0-17.7-14.3-32-32-32s-32 14.3-32 32V51.2c-42.6 8.6-79 34.2-102 69.3L38.8 5.1zM160 242.7c0 29-11.5 56.8-32 77.3l-1.5 1.5C107 341 96 367.5 96 395.2c0 11.5 9.3 20.8 20.8 20.8H406.2L160 222.1v20.7zM384 448H320 256c0 17 6.7 33.3 18.7 45.3s28.3 18.7 45.3 18.7s33.3-6.7 45.3-18.7s18.7-28.3 18.7-45.3z"></path></svg></span><span class="mantine-1saksck mantine-Button-label">학습 알림</span></div></button><button class="mantine-UnstyledButton-root mantine-Button-root mantine-1lpqcep" type="button" data-button="true"><div class="mantine-1yjkc96 mantine-Button-inner"><span class="mantine-Button-icon mantine-Button-leftIcon mantine-19ok7fu"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" style="font-size: 16px; color: inherit;"><path fill="currentColor" d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"></path></svg></span><span class="mantine-1ryt1ht mantine-Button-label">수강평 쓰기</span></div></button></div></div></header><div class="css-1x7jobc"><div class="css-12x6v0l mantine-1avyp1d" id="player-container"><div class="css-2pste9 mantine-1avyp1d"><div class="css-1ej68cy shaka-video-container" data-shaka-player-container="" shaka-controls="true" style="cursor: none;"><video autoplay="" playsinline="" class="css-w1atjl shaka-video" data-unit-title="Grid CSS" src="blob:https://www.inflearn.com/5bc9fea4-2233-4810-a9b4-f42fc446ef3d"><track kind="captions" srclang="ko" src="https://www.inflearn.com/subtitles/650938bb1d016866847177ff/vtt"></video><div class="shaka-controls-container" shown="true"><div class="shaka-scrim-container"></div><div class="shaka-server-side-ad-container"></div><div class="shaka-bottom-controls shaka-no-propagation"><div id="subtitle-ui"></div><div class="shaka-ad-controls shaka-hidden"><div class="shaka-ad-position shaka-hidden"><span class="shaka-ad-position-span"></span></div><div class="shaka-ad-counter"><span class="shaka-ad-counter-span"></span></div></div><div class="shaka-controls-button-panel shaka-show-controls-on-mouse-over"><div id="play-pause-button-ui"><div class="css-s6gh4z mantine-1avyp1d"><button class="mantine-UnstyledButton-root mantine-ActionIcon-root mantine-785tip" type="button"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="play" class="svg-inline--fa fa-play " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" style="font-size: 16px; color: inherit;"><path fill="currentColor" d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"></path></svg></button></div></div><button type="button" class="shaka-mute-button material-icons-round shaka-tooltip" aria-label="음소거">volume_up</button><div class="shaka-range-container shaka-volume-bar-container" style="background: linear-gradient(to right, rgb(255, 255, 255) 100%, rgba(255, 255, 255, 0.54) 100%, rgba(255, 255, 255, 0.54) 100%);"><input class="shaka-range-element shaka-volume-bar" type="range" step="any" min="0" max="1" aria-label="볼륨"></div><button type="button" class="shaka-current-time" disabled="">15:26 / 15:43</button><div class="shaka-spacer" aria-hidden="true"></div><div id="auto-play-ui"><span class=""></span></div><div id="playback-rate-button-ui"><div class="shaka-settings-menu shaka-hidden customPlayback-hidden-handler"></div><div class="css-s6gh4z mantine-1avyp1d"><button class="icon-asset shaka-playback-rate-button shaka-no-propagation material-icons-round css-9spqz8">speed</button></div></div><div id="subtitle-button-ui"><div class="shaka-settings-menu shaka-hidden subtitle-button-hidden-handler"></div><div class="shaka-settings-menu shaka-hidden subtitle-button-size-hidden-handler"></div><div class="css-s6gh4z mantine-1avyp1d"><div aria-haspopup="menu" aria-expanded="false" aria-controls="mantine-7m8l39wkf-dropdown" id="mantine-7m8l39wkf-target" class=""><button class="mantine-UnstyledButton-root mantine-ActionIcon-root mantine-785tip" type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls="mantine-8tvjk1g2x-dropdown" id="mantine-8tvjk1g2x-target"><svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="subtitles" class="svg-inline--fa fa-subtitles " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" style="font-size: 16px; color: inherit;"><path fill="currentColor" d="M64 80c-8.8 0-16 7.2-16 16V416c0 8.8 7.2 16 16 16H512c8.8 0 16-7.2 16-16V96c0-8.8-7.2-16-16-16H64zM0 96C0 60.7 28.7 32 64 32H512c35.3 0 64 28.7 64 64V416c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V96zM120 240H296c13.3 0 24 10.7 24 24s-10.7 24-24 24H120c-13.3 0-24-10.7-24-24s10.7-24 24-24zm256 0h80c13.3 0 24 10.7 24 24s-10.7 24-24 24H376c-13.3 0-24-10.7-24-24s10.7-24 24-24zM120 336h80c13.3 0 24 10.7 24 24s-10.7 24-24 24H120c-13.3 0-24-10.7-24-24s10.7-24 24-24zm160 0H456c13.3 0 24 10.7 24 24s-10.7 24-24 24H280c-13.3 0-24-10.7-24-24s10.7-24 24-24z"></path></svg></button></div><div class="mantine-Menu-dropdown mantine-1vp861n" aria-labelledby="mantine-7m8l39wkf-target" id="mantine-7m8l39wkf-dropdown" role="menu" tabindex="-1" data-position="top" aria-orientation="vertical" style="display: none; z-index: 300; top: 879px; left: 1029px; width: 13.125rem;"><div tabindex="-1" data-menu-dropdown="true" data-autofocus="true" style="outline: 0px;"><button class="mantine-Menu-item mantine-109t8hg" type="button" tabindex="-1" role="menuitem" data-menu-item="true"><div class="mantine-1rnkhfs mantine-Menu-itemLabel">자막 켜기</div></button><button class="mantine-Menu-item css-1vs9cou mantine-109t8hg" type="button" disabled="" tabindex="-1" role="menuitem" data-menu-item="true"><div class="mantine-1rnkhfs mantine-Menu-itemLabel"><div class="mantine-Group-root mantine-d8k4uu"><p class="mantine-Text-root mantine-15n2wdu">영상 아래 자막 표시</p><div class="mantine-Switch-root css-1nfofml mantine-Switch-root mantine-idbw46"><div class="mantine-1xir3ka mantine-Switch-body"><input disabled="" id="mantine-dnlzjgmxv" type="checkbox" class="mantine-19htmtn mantine-Switch-input"><label for="mantine-dnlzjgmxv" class="mantine-uax30g mantine-Switch-track"><div class="mantine-mbyvhy mantine-Switch-thumb"></div><div class="mantine-1tps2x6 mantine-Switch-trackLabel"></div></label><div class="mantine-1y1om6k mantine-Switch-labelWrapper"></div></div></div></div></div></button><button class="mantine-Menu-item css-1vs9cou mantine-109t8hg" type="button" disabled="" tabindex="-1" role="menuitem" data-menu-item="true"><div class="mantine-1rnkhfs mantine-Menu-itemLabel"><div class="css-1066lcq mantine-1avyp1d"><p class="mantine-Text-root mantine-1slwiil">크기 설정</p></div></div></button></div></div></div></div><div id="fullscreen-button-ui"><div class="css-s6gh4z mantine-1avyp1d"><button class="mantine-UnstyledButton-root mantine-ActionIcon-root fullscreen--compress mantine-785tip" type="button"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="compress" class="svg-inline--fa fa-compress " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" style="font-size: 16px; color: inherit;"><path fill="currentColor" d="M160 64c0-17.7-14.3-32-32-32s-32 14.3-32 32v64H32c-17.7 0-32 14.3-32 32s14.3 32 32 32h96c17.7 0 32-14.3 32-32V64zM32 320c-17.7 0-32 14.3-32 32s14.3 32 32 32H96v64c0 17.7 14.3 32 32 32s32-14.3 32-32V352c0-17.7-14.3-32-32-32H32zM352 64c0-17.7-14.3-32-32-32s-32 14.3-32 32v96c0 17.7 14.3 32 32 32h96c17.7 0 32-14.3 32-32s-14.3-32-32-32H352V64zM320 320c-17.7 0-32 14.3-32 32v96c0 17.7 14.3 32 32 32s32-14.3 32-32V384h64c17.7 0 32-14.3 32-32s-14.3-32-32-32H320z"></path></svg></button><button class="mantine-UnstyledButton-root mantine-ActionIcon-root fullscreen--expand mantine-785tip" type="button"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="expand" class="svg-inline--fa fa-expand " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" style="font-size: 16px; color: inherit;"><path fill="currentColor" d="M32 32C14.3 32 0 46.3 0 64v96c0 17.7 14.3 32 32 32s32-14.3 32-32V96h64c17.7 0 32-14.3 32-32s-14.3-32-32-32H32zM64 352c0-17.7-14.3-32-32-32s-32 14.3-32 32v96c0 17.7 14.3 32 32 32h96c17.7 0 32-14.3 32-32s-14.3-32-32-32H64V352zM320 32c-17.7 0-32 14.3-32 32s14.3 32 32 32h64v64c0 17.7 14.3 32 32 32s32-14.3 32-32V64c0-17.7-14.3-32-32-32H320zM448 352c0-17.7-14.3-32-32-32s-32 14.3-32 32v64H320c-17.7 0-32 14.3-32 32s14.3 32 32 32h96c17.7 0 32-14.3 32-32V352z"></path></svg></button></div></div><button type="button" class="shaka-overflow-menu-button shaka-no-propagation material-icons-round shaka-tooltip" aria-label="설정 더보기">more_vert</button></div><div class="shaka-range-container shaka-seek-bar-container" style="background: linear-gradient(to right, rgb(0, 196, 113) 92.1796%, rgb(0, 196, 113) 92.1796%, rgb(0, 196, 113) 98.1891%, rgba(255, 255, 255, 0.4) 98.1891%, rgba(255, 255, 255, 0.4) 100%, rgba(255, 255, 255, 0.2) 100%);"><div class="shaka-ad-markers"></div><input class="shaka-range-element shaka-seek-bar shaka-no-propagation shaka-show-controls-on-mouse-over" type="range" step="any" min="0" max="943.4999640000016" aria-label="찾기"></div></div><div class="shaka-overflow-menu shaka-no-propagation shaka-show-controls-on-mouse-over shaka-hidden"><button type="button" class="shaka-overflow-button shaka-resolution-button shaka-tooltip-status" shaka-status="자동" aria-label="해상도"><i class="material-icons-round">settings</i><label class="shaka-overflow-button-label shaka-overflow-menu-only"><span>해상도</span><span class="shaka-current-selection-span">자동</span></label></button><button type="button" class="shaka-pip-button shaka-tooltip" aria-label="PIP 모드 시작"><i class="material-icons-round">picture_in_picture_alt</i><label class="shaka-overflow-button-label shaka-overflow-menu-only"><span>PIP 모드</span><span class="shaka-current-selection-span">사용 안함</span></label></button></div><div class="shaka-no-propagation shaka-show-controls-on-mouse-over shaka-settings-menu shaka-hidden shaka-resolutions"><button type="button" class="shaka-back-to-overflow-button" aria-label="해상도"><i class="material-icons-round">arrow_back</i><span>해상도</span></button><button type="button" class="explicit-resolution"><span>1080p</span></button><button type="button" class="explicit-resolution"><span>720p</span></button><button type="button" class="explicit-resolution"><span>540p</span></button><button type="button" class="shaka-enable-abr-button" aria-selected="true"><span class="shaka-auto-span shaka-chosen-item">자동</span><i class="material-icons-round shaka-chosen-item" aria-hidden="true">done</i></button></div></div><div class="shaka-client-side-ad-container shaka-hidden"></div><div class="shaka-spinner-container shaka-hidden"><div class="shaka-spinner"><svg class="shaka-spinner-svg" viewBox="0 0 30 30"><circle class="shaka-spinner-path" cx="15" cy="15" r="14.5" fill="none" stroke-width="1" stroke-miterlimit="10"></circle></svg></div></div><h1 class="player-title">Grid CSS</h1><div class="shaka-text-container" style="text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: flex-end;"></div></div></div><div class="overlay__playback-rate"><span class="overlay__playback-rate__speed css-emsr0s mantine-1avyp1d"></span><span class="overlay__playback-rate__icon css-1ir6lq6 mantine-1avyp1d" style="display: none;"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="forward" class="svg-inline--fa fa-forward forward" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="font-size: 16px; color: white;"><path fill="currentColor" d="M52.5 440.6c-9.5 7.9-22.8 9.7-34.1 4.4S0 428.4 0 416V96C0 83.6 7.2 72.3 18.4 67s24.5-3.6 34.1 4.4L224 214.3V256v41.7L52.5 440.6zM256 352V256 128 96c0-12.4 7.2-23.7 18.4-29s24.5-3.6 34.1 4.4l192 160c7.3 6.1 11.5 15.1 11.5 24.6s-4.2 18.5-11.5 24.6l-192 160c-9.5 7.9-22.8 9.7-34.1 4.4s-18.4-16.6-18.4-29V352z"></path></svg><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="backward" class="svg-inline--fa fa-backward backward" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="font-size: 16px; color: white;"><path fill="currentColor" d="M459.5 440.6c9.5 7.9 22.8 9.7 34.1 4.4s18.4-16.6 18.4-29V96c0-12.4-7.2-23.7-18.4-29s-24.5-3.6-34.1 4.4L288 214.3V256v41.7L459.5 440.6zM256 352V256 128 96c0-12.4-7.2-23.7-18.4-29s-24.5-3.6-34.1 4.4l-192 160C4.2 237.5 0 246.5 0 256s4.2 18.5 11.5 24.6l192 160c9.5 7.9 22.8 9.7 34.1 4.4s18.4-16.6 18.4-29V352z"></path></svg></span></div><div><div class="mantine-Modal-root mantine-yxmaw9"></div></div></div><div class="css-182odza"><button type="button" class="css-1xq1rmk"><p class="css-1vtpfoe">Grid CSS</p><span><svg aria-hidden="true" focusable="false" data-prefix="fal" data-icon="angle-down" class="svg-inline--fa fa-angle-down " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" style="font-size: 12px; color: inherit;"><path fill="currentColor" d="M212.7 331.3c6.2 6.2 16.4 6.2 22.6 0l160-160c6.2-6.2 6.2-16.4 0-22.6s-16.4-6.2-22.6 0L224 297.4 75.3 148.7c-6.2-6.2-16.4-6.2-22.6 0s-6.2 16.4 0 22.6l160 160z"></path></svg></span></button><div data-testid="mobileDashboardMyVoucher" class="css-15wdu8x"><div class="css-1066lcq"><div><p class="css-1pqj6dl"><span>강의명 : </span>따라하며 배우는 HTML, CSS</p><p class="css-1r740cn">수강 기한 : 무제한</p><p class="css-1ld38rh">진도율 : 34강/56강 (60.71%) | 시간: 4시간 10분/8시간 26분</p></div></div><progress value="60.71" max="100" class="css-o64h6y"></progress></div><ul class="css-bpwffa"><li><a href="https://www.inflearn.com/course/%EB%94%B0%EB%9D%BC%ED%95%98%EB%A9%B0-%EB%B0%B0%EC%9A%B0%EB%8A%94-html-css/dashboard" class="css-0"><span class="css-1rfckb6"><span><svg width="18" aria-hidden="true" focusable="false" data-prefix="far" data-icon="external-link" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><title>LinkFarIcon</title><path fill="#212529" d="M497.6,0,334.4.17A14.4,14.4,0,0,0,320,14.57V47.88a14.4,14.4,0,0,0,14.69,14.4l73.63-2.72,2.06,2.06L131.52,340.49a12,12,0,0,0,0,17l23,23a12,12,0,0,0,17,0L450.38,101.62l2.06,2.06-2.72,73.63A14.4,14.4,0,0,0,464.12,192h33.31a14.4,14.4,0,0,0,14.4-14.4L512,14.4A14.4,14.4,0,0,0,497.6,0ZM432,288H416a16,16,0,0,0-16,16V458a6,6,0,0,1-6,6H54a6,6,0,0,1-6-6V118a6,6,0,0,1,6-6H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V304A16,16,0,0,0,432,288Z"></path></svg></span><span>나가기</span></span></a></li><li><span class="css-1rfckb6"><span><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bell-slash" class="svg-inline--fa fa-bell-slash " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" style="font-size: 16px; color: inherit;"><path fill="currentColor" d="M38.8 5.1C28.4-3.1 13.3-1.2 5.1 9.2S-1.2 34.7 9.2 42.9l592 464c10.4 8.2 25.5 6.3 33.7-4.1s6.3-25.5-4.1-33.7l-87.5-68.6c.5-1.7 .7-3.5 .7-5.4c0-27.6-11-54.1-30.5-73.7L512 320c-20.5-20.5-32-48.3-32-77.3V208c0-77.4-55-142-128-156.8V32c0-17.7-14.3-32-32-32s-32 14.3-32 32V51.2c-42.6 8.6-79 34.2-102 69.3L38.8 5.1zM160 242.7c0 29-11.5 56.8-32 77.3l-1.5 1.5C107 341 96 367.5 96 395.2c0 11.5 9.3 20.8 20.8 20.8H406.2L160 222.1v20.7zM384 448H320 256c0 17 6.7 33.3 18.7 45.3s28.3 18.7 45.3 18.7s33.3-6.7 45.3-18.7s18.7-28.3 18.7-45.3z"></path></svg></span><span>학습 알림</span></span></li><li><span class="css-17gsa7r"><span><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" style="font-size: 16px; color: rgb(33, 37, 41);"><path fill="currentColor" d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"></path></svg></span><span>수강평</span></span></li><li><span class="css-lra3fa"><span><svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="check" class="svg-inline--fa fa-check " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" style="font-size: 16px; color: rgb(33, 37, 41);"><path fill="currentColor" d="M441 103c9.4 9.4 9.4 24.6 0 33.9L177 401c-9.4 9.4-24.6 9.4-33.9 0L7 265c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l119 119L407 103c9.4-9.4 24.6-9.4 33.9 0z"></path></svg></span><span>봤어요</span></span></li><li><span class="css-1rfckb6"><span><svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="arrow-left" class="svg-inline--fa fa-arrow-left " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" style="font-size: 20px; color: inherit;"><path fill="currentColor" d="M7.4 273.4C2.7 268.8 0 262.6 0 256s2.7-12.8 7.4-17.4l176-168c9.6-9.2 24.8-8.8 33.9 .8s8.8 24.8-.8 33.9L83.9 232 424 232c13.3 0 24 10.7 24 24s-10.7 24-24 24L83.9 280 216.6 406.6c9.6 9.2 9.9 24.3 .8 33.9s-24.3 9.9-33.9 .8l-176-168z"></path></svg></span><span>이전 수업</span></span></li><li><span class="css-1rfckb6"><span><svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="arrow-right" class="svg-inline--fa fa-arrow-right " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" style="font-size: 20px; color: inherit;"><path fill="currentColor" d="M440.6 273.4c4.7-4.5 7.4-10.8 7.4-17.4s-2.7-12.8-7.4-17.4l-176-168c-9.6-9.2-24.8-8.8-33.9 .8s-8.8 24.8 .8 33.9L364.1 232 24 232c-13.3 0-24 10.7-24 24s10.7 24 24 24l340.1 0L231.4 406.6c-9.6 9.2-9.9 24.3-.8 33.9s24.3 9.9 33.9 .8l176-168z"></path></svg></span><span>다음 수업</span></span></li></ul></div></div><div class="css-183eqo6 mantine-1avyp1d"><span aria-haspopup="menu" aria-expanded="false" aria-controls="mantine-8j547wn3z-dropdown" id="mantine-8j547wn3z-target" class=""><button class="mantine-UnstyledButton-root mantine-ActionIcon-root  css-bl5cf mantine-38cnjn" type="button" title="도움말" aria-label="도움말 열기"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="question" class="svg-inline--fa fa-question " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" style="font-size: 20px; color: rgb(37, 38, 43);"><path fill="currentColor" d="M80 160c0-35.3 28.7-64 64-64h32c35.3 0 64 28.7 64 64v3.6c0 21.8-11.1 42.1-29.4 53.8l-42.2 27.1c-25.2 16.2-40.4 44.1-40.4 74V320c0 17.7 14.3 32 32 32s32-14.3 32-32v-1.4c0-8.2 4.2-15.8 11-20.2l42.2-27.1c36.6-23.6 58.8-64.1 58.8-107.7V160c0-70.7-57.3-128-128-128H144C73.3 32 16 89.3 16 160c0 17.7 14.3 32 32 32s32-14.3 32-32zm80 320a40 40 0 1 0 0-80 40 40 0 1 0 0 80z"></path></svg></button></span></div><footer data-testid="unit-footer" class="css-6u8lvz"><div><div class="mantine-Group-root mantine-10dzz7t"><button class="mantine-UnstyledButton-root mantine-Button-root mantine-1pemk37" type="button" data-button="true"><div class="mantine-1yjkc96 mantine-Button-inner"><span class="mantine-Button-icon mantine-Button-leftIcon mantine-19ok7fu"><svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="chevron-left" class="svg-inline--fa fa-chevron-left " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" style="font-size: 16px; color: inherit;"><path fill="currentColor" d="M15 239c-9.4 9.4-9.4 24.6 0 33.9L207 465c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9L65.9 256 241 81c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0L15 239z"></path></svg></span><span class="mantine-1ryt1ht mantine-Button-label">이전 수업</span></div></button><button class="mantine-UnstyledButton-root mantine-ActionIcon-root css-je8g23 mantine-7btqsm" type="button"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check" class="svg-inline--fa fa-check " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" style="font-size: 14px; color: inherit;"><path fill="currentColor" d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"></path></svg></button><button class="mantine-UnstyledButton-root mantine-Button-root mantine-c5w2vi" type="button" data-button="true"><div class="mantine-1yjkc96 mantine-Button-inner"><span class="mantine-1ryt1ht mantine-Button-label">다음 수업</span><span class="mantine-Button-icon mantine-Button-rightIcon mantine-euqupz"><svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="chevron-right" class="svg-inline--fa fa-chevron-right " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" style="font-size: 16px; color: inherit;"><path fill="currentColor" d="M305 239c9.4 9.4 9.4 24.6 0 33.9L113 465c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l175-175L79 81c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0L305 239z"></path></svg></span></div></button></div></div></footer></div></main><div class="css-axirao"><ul data-testid="sidebar" class="css-hvum3b"><li aria-current="false" class="css-zl1inp"><button type="button" title="커리큘럼" aria-label="curriculum-tab-toggle-button" class="css-v18hes"><svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="golf-flag-hole" class="svg-inline--fa fa-golf-flag-hole " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="font-size: 24px; color: rgb(134, 142, 150);"><path fill="currentColor" d="M162.7 2.5c-7.4-3.7-16.3-3.3-23.4 1.1S128 15.7 128 24V160v64 8 55.1 49.8V384c0 .7 0 1.5 .1 2.2c-.1 .6-.1 1.2-.1 1.8c0 19.9 35.8 36 80 36s80-16.1 80-36s-35.8-36-80-36c-11.4 0-22.2 1.1-32 3V326.2c24.6-3.9 51.5-6.2 80-6.2c61.7 0 116.4 10.4 154.9 26.3c19.3 8 33.3 16.9 42.1 25.5c8.7 8.6 11 15.4 11 20.2s-2.3 11.7-11 20.2c-8.8 8.6-22.8 17.5-42.1 25.5C372.4 453.6 317.7 464 256 464s-116.4-10.4-154.9-26.3c-19.3-8-33.3-16.9-42.1-25.5c-8.7-8.6-11-15.4-11-20.2s2.3-11.7 11-20.2c8-7.9 20.3-15.9 37-23.3V296.8c-4.5 1.6-9 3.3-13.2 5.1c-22.7 9.4-42.7 21.2-57.3 35.5C10.7 351.9 0 370.3 0 392s10.7 40.1 25.4 54.5c14.7 14.3 34.6 26.1 57.3 35.5C128.3 500.9 189.6 512 256 512s127.7-11.1 173.2-29.9c22.7-9.4 42.7-21.2 57.3-35.5C501.3 432.1 512 413.7 512 392s-10.7-40.1-25.4-54.5c-14.6-14.3-34.6-26.1-57.3-35.5C383.7 283.1 322.4 272 256 272c-27.8 0-54.8 1.9-80 5.6V246.8l194.7-97.4c8.1-4.1 13.3-12.4 13.3-21.5s-5.1-17.4-13.3-21.5l-208-104zM176 193.2V62.8L306.3 128 176 193.2z"></path></svg><p class="mantine-Text-root mantine-qjo01i">커리큘럼</p></button></li><li aria-current="false" class="css-zl1inp"><button type="button" title="커뮤니티" aria-label="community-tab-toggle-button" class="css-v18hes"><svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="comment-smile" class="svg-inline--fa fa-comment-smile " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="font-size: 24px; color: rgb(134, 142, 150);"><path fill="currentColor" d="M168.2 384.9c-15-5.4-31.7-3.1-44.6 6.4c-8.2 6-22.3 14.8-39.4 22.7c5.6-14.7 9.9-31.3 11.3-49.4c1-12.9-3.3-25.7-11.8-35.5C60.4 302.8 48 272 48 240c0-79.5 83.3-160 208-160s208 80.5 208 160s-83.3 160-208 160c-31.6 0-61.3-5.5-87.8-15.1zM26.3 423.8c-1.6 2.7-3.3 5.4-5.1 8.1l-.3 .5c-1.6 2.3-3.2 4.6-4.8 6.9c-3.5 4.7-7.3 9.3-11.3 13.5c-4.6 4.6-5.9 11.4-3.4 17.4c2.5 6 8.3 9.9 14.8 9.9c5.1 0 10.2-.3 15.3-.8l.7-.1c4.4-.5 8.8-1.1 13.2-1.9c.8-.1 1.6-.3 2.4-.5c17.8-3.5 34.9-9.5 50.1-16.1c22.9-10 42.4-21.9 54.3-30.6c31.8 11.5 67 17.9 104.1 17.9c141.4 0 256-93.1 256-208S397.4 32 256 32S0 125.1 0 240c0 45.1 17.7 86.8 47.7 120.9c-1.9 24.5-11.4 46.3-21.4 62.9zM192 208a32 32 0 1 0 0-64 32 32 0 1 0 0 64zm128 0a32 32 0 1 0 0-64 32 32 0 1 0 0 64zM150.5 270.1c-9.9 8.8-10.7 24-1.9 33.9c26.3 29.4 64.7 48 107.3 48s81-18.6 107.3-48c8.8-9.9 8-25-1.9-33.9s-25-8-33.9 1.9c-17.6 19.7-43.1 32-71.6 32s-53.9-12.3-71.6-32c-8.8-9.9-24-10.7-33.9-1.9z"></path></svg><p class="mantine-Text-root mantine-qjo01i">커뮤니티</p></button></li><li aria-current="false" class="css-zl1inp"><button type="button" title="노트" aria-label="note-tab-toggle-button" class="css-v18hes"><svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="book" class="svg-inline--fa fa-book " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" style="font-size: 24px; color: rgb(134, 142, 150);"><path fill="currentColor" d="M0 88C0 39.4 39.4 0 88 0H392c30.9 0 56 25.1 56 56V344c0 22.3-13.1 41.6-32 50.6V464h8c13.3 0 24 10.7 24 24s-10.7 24-24 24H80c-44.2 0-80-35.8-80-80c0-2.7 .1-5.4 .4-8H0V88zM80 400c-17.7 0-32 14.3-32 32s14.3 32 32 32H368V400H80zM48 358.7c9.8-4.3 20.6-6.7 32-6.7H392c4.4 0 8-3.6 8-8V56c0-4.4-3.6-8-8-8H88C65.9 48 48 65.9 48 88V358.7zM152 112H328c13.3 0 24 10.7 24 24s-10.7 24-24 24H152c-13.3 0-24-10.7-24-24s10.7-24 24-24zm0 80H328c13.3 0 24 10.7 24 24s-10.7 24-24 24H152c-13.3 0-24-10.7-24-24s10.7-24 24-24z"></path></svg><p class="mantine-Text-root mantine-qjo01i">노트</p></button></li><li aria-current="false" class="css-zl1inp"><button type="button" title="성장 로그" aria-label="activity-log-tab-toggle-button" class="css-v18hes"><svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="leaf" class="svg-inline--fa fa-leaf " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="font-size: 24px; color: rgb(134, 142, 150);"><path fill="currentColor" d="M149.6 234.4c20.9-6.7 43.2-10.4 66.4-10.4h80c13.3 0 24 10.7 24 24s-10.7 24-24 24H216c-25.4 0-49.5 5.6-71 15.7C152.7 351 206.6 400 271.9 400h.1l.8 0 .1 0C370.2 399.5 464 299.7 464 156.6c0-12.8-.8-25.3-2.3-37.5C437 134.9 407.6 144 376 144l-104 0c-57.6 0-106.3 38.1-122.4 90.4zM96.4 260.1C102.5 168.5 178.8 96 272 96l104 0c28.7 0 54.8-10.8 74.6-28.5c.7-.6 1.4-1.3 2.1-1.9c6.6-6.2 12.5-13.2 17.4-20.9c1.6-2.5 3.2-5.1 4.6-7.8c3.5-6.5 13.6-6.8 16.2 .1c1.3 3.5 2.5 7 3.7 10.6c2.9 8.9 5.5 17.9 7.8 27.2c.5 1.9 .9 3.8 1.3 5.6c5.4 24.3 8.3 49.8 8.3 76.2C512 317.1 405.1 447.3 273 448l-1 0c-81.7 0-150.4-55.7-170.2-131.2C68.7 347.5 48 391.3 48 440v16c0 13.3-10.7 24-24 24s-24-10.7-24-24V440c0-75.1 38.3-141.2 96.4-179.9z"></path></svg><p class="mantine-Text-root mantine-qjo01i">성장 로그</p></button></li><li aria-current="false" class="css-zl1inp"><button type="button" title="스크립트" aria-label="대본-라벨" class="css-v18hes"><svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="closed-captioning" class="svg-inline--fa fa-closed-captioning " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" style="font-size: 24px; color: rgb(134, 142, 150);"><path fill="currentColor" d="M512 80c8.8 0 16 7.2 16 16V416c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V96c0-8.8 7.2-16 16-16H512zM64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H512c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zM200 208c14.2 0 27 6.1 35.8 16c8.8 9.9 24 10.7 33.9 1.9s10.7-24 1.9-33.9c-17.5-19.6-43.1-32-71.5-32c-53 0-96 43-96 96s43 96 96 96c28.4 0 54-12.4 71.5-32c8.8-9.9 8-25-1.9-33.9s-25-8-33.9 1.9c-8.8 9.9-21.6 16-35.8 16c-26.5 0-48-21.5-48-48s21.5-48 48-48zm144 48c0-26.5 21.5-48 48-48c14.2 0 27 6.1 35.8 16c8.8 9.9 24 10.7 33.9 1.9s10.7-24 1.9-33.9c-17.5-19.6-43.1-32-71.5-32c-53 0-96 43-96 96s43 96 96 96c28.4 0 54-12.4 71.5-32c8.8-9.9 8-25-1.9-33.9s-25-8-33.9 1.9c-8.8 9.9-21.6 16-35.8 16c-26.5 0-48-21.5-48-48z"></path></svg><p class="mantine-Text-root mantine-qjo01i">스크립트</p></button></li><li class="css-1gfm3uk"><div class="css-tgarj3"><span aria-haspopup="menu" aria-expanded="false" aria-controls="mantine-ofgqwoc8g-dropdown" id="mantine-ofgqwoc8g-target" class=""><button class="mantine-UnstyledButton-root mantine-ActionIcon-root  css-bl5cf mantine-38cnjn" type="button" title="도움말" aria-label="도움말 열기"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="question" class="svg-inline--fa fa-question " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" style="font-size: 20px; color: rgb(37, 38, 43);"><path fill="currentColor" d="M80 160c0-35.3 28.7-64 64-64h32c35.3 0 64 28.7 64 64v3.6c0 21.8-11.1 42.1-29.4 53.8l-42.2 27.1c-25.2 16.2-40.4 44.1-40.4 74V320c0 17.7 14.3 32 32 32s32-14.3 32-32v-1.4c0-8.2 4.2-15.8 11-20.2l42.2-27.1c36.6-23.6 58.8-64.1 58.8-107.7V160c0-70.7-57.3-128-128-128H144C73.3 32 16 89.3 16 160c0 17.7 14.3 32 32 32s32-14.3 32-32zm80 320a40 40 0 1 0 0-80 40 40 0 1 0 0 80z"></path></svg></button></span></div></li></ul></div><div class="css-m8edzb"><ul class="css-15currb"><li aria-current="false" class="css-qvrrxd"><button type="button" aria-label="curriculum-tab-toggle-button" class="css-1vt6fuy"><span><svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="golf-flag-hole" class="svg-inline--fa fa-golf-flag-hole " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="font-size: 16px; color: inherit;"><path fill="currentColor" d="M162.7 2.5c-7.4-3.7-16.3-3.3-23.4 1.1S128 15.7 128 24V160v64 8 55.1 49.8V384c0 .7 0 1.5 .1 2.2c-.1 .6-.1 1.2-.1 1.8c0 19.9 35.8 36 80 36s80-16.1 80-36s-35.8-36-80-36c-11.4 0-22.2 1.1-32 3V326.2c24.6-3.9 51.5-6.2 80-6.2c61.7 0 116.4 10.4 154.9 26.3c19.3 8 33.3 16.9 42.1 25.5c8.7 8.6 11 15.4 11 20.2s-2.3 11.7-11 20.2c-8.8 8.6-22.8 17.5-42.1 25.5C372.4 453.6 317.7 464 256 464s-116.4-10.4-154.9-26.3c-19.3-8-33.3-16.9-42.1-25.5c-8.7-8.6-11-15.4-11-20.2s2.3-11.7 11-20.2c8-7.9 20.3-15.9 37-23.3V296.8c-4.5 1.6-9 3.3-13.2 5.1c-22.7 9.4-42.7 21.2-57.3 35.5C10.7 351.9 0 370.3 0 392s10.7 40.1 25.4 54.5c14.7 14.3 34.6 26.1 57.3 35.5C128.3 500.9 189.6 512 256 512s127.7-11.1 173.2-29.9c22.7-9.4 42.7-21.2 57.3-35.5C501.3 432.1 512 413.7 512 392s-10.7-40.1-25.4-54.5c-14.6-14.3-34.6-26.1-57.3-35.5C383.7 283.1 322.4 272 256 272c-27.8 0-54.8 1.9-80 5.6V246.8l194.7-97.4c8.1-4.1 13.3-12.4 13.3-21.5s-5.1-17.4-13.3-21.5l-208-104zM176 193.2V62.8L306.3 128 176 193.2z"></path></svg></span><span>커리큘럼</span></button></li><li aria-current="false" class="css-qvrrxd"><button type="button" aria-label="community-tab-toggle-button" class="css-1vt6fuy"><span><svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="comment-smile" class="svg-inline--fa fa-comment-smile " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="font-size: 16px; color: inherit;"><path fill="currentColor" d="M168.2 384.9c-15-5.4-31.7-3.1-44.6 6.4c-8.2 6-22.3 14.8-39.4 22.7c5.6-14.7 9.9-31.3 11.3-49.4c1-12.9-3.3-25.7-11.8-35.5C60.4 302.8 48 272 48 240c0-79.5 83.3-160 208-160s208 80.5 208 160s-83.3 160-208 160c-31.6 0-61.3-5.5-87.8-15.1zM26.3 423.8c-1.6 2.7-3.3 5.4-5.1 8.1l-.3 .5c-1.6 2.3-3.2 4.6-4.8 6.9c-3.5 4.7-7.3 9.3-11.3 13.5c-4.6 4.6-5.9 11.4-3.4 17.4c2.5 6 8.3 9.9 14.8 9.9c5.1 0 10.2-.3 15.3-.8l.7-.1c4.4-.5 8.8-1.1 13.2-1.9c.8-.1 1.6-.3 2.4-.5c17.8-3.5 34.9-9.5 50.1-16.1c22.9-10 42.4-21.9 54.3-30.6c31.8 11.5 67 17.9 104.1 17.9c141.4 0 256-93.1 256-208S397.4 32 256 32S0 125.1 0 240c0 45.1 17.7 86.8 47.7 120.9c-1.9 24.5-11.4 46.3-21.4 62.9zM192 208a32 32 0 1 0 0-64 32 32 0 1 0 0 64zm128 0a32 32 0 1 0 0-64 32 32 0 1 0 0 64zM150.5 270.1c-9.9 8.8-10.7 24-1.9 33.9c26.3 29.4 64.7 48 107.3 48s81-18.6 107.3-48c8.8-9.9 8-25-1.9-33.9s-25-8-33.9 1.9c-17.6 19.7-43.1 32-71.6 32s-53.9-12.3-71.6-32c-8.8-9.9-24-10.7-33.9-1.9z"></path></svg></span><span>커뮤니티</span></button></li><li aria-current="false" class="css-qvrrxd"><button type="button" aria-label="note-tab-toggle-button" class="css-1vt6fuy"><span><svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="book" class="svg-inline--fa fa-book " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" style="font-size: 16px; color: inherit;"><path fill="currentColor" d="M0 88C0 39.4 39.4 0 88 0H392c30.9 0 56 25.1 56 56V344c0 22.3-13.1 41.6-32 50.6V464h8c13.3 0 24 10.7 24 24s-10.7 24-24 24H80c-44.2 0-80-35.8-80-80c0-2.7 .1-5.4 .4-8H0V88zM80 400c-17.7 0-32 14.3-32 32s14.3 32 32 32H368V400H80zM48 358.7c9.8-4.3 20.6-6.7 32-6.7H392c4.4 0 8-3.6 8-8V56c0-4.4-3.6-8-8-8H88C65.9 48 48 65.9 48 88V358.7zM152 112H328c13.3 0 24 10.7 24 24s-10.7 24-24 24H152c-13.3 0-24-10.7-24-24s10.7-24 24-24zm0 80H328c13.3 0 24 10.7 24 24s-10.7 24-24 24H152c-13.3 0-24-10.7-24-24s10.7-24 24-24z"></path></svg></span><span>노트</span></button></li><li aria-current="false" class="css-qvrrxd"><button type="button" aria-label="activity-log-tab-toggle-button" class="css-1vt6fuy"><span><svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="leaf" class="svg-inline--fa fa-leaf " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="font-size: 16px; color: inherit;"><path fill="currentColor" d="M149.6 234.4c20.9-6.7 43.2-10.4 66.4-10.4h80c13.3 0 24 10.7 24 24s-10.7 24-24 24H216c-25.4 0-49.5 5.6-71 15.7C152.7 351 206.6 400 271.9 400h.1l.8 0 .1 0C370.2 399.5 464 299.7 464 156.6c0-12.8-.8-25.3-2.3-37.5C437 134.9 407.6 144 376 144l-104 0c-57.6 0-106.3 38.1-122.4 90.4zM96.4 260.1C102.5 168.5 178.8 96 272 96l104 0c28.7 0 54.8-10.8 74.6-28.5c.7-.6 1.4-1.3 2.1-1.9c6.6-6.2 12.5-13.2 17.4-20.9c1.6-2.5 3.2-5.1 4.6-7.8c3.5-6.5 13.6-6.8 16.2 .1c1.3 3.5 2.5 7 3.7 10.6c2.9 8.9 5.5 17.9 7.8 27.2c.5 1.9 .9 3.8 1.3 5.6c5.4 24.3 8.3 49.8 8.3 76.2C512 317.1 405.1 447.3 273 448l-1 0c-81.7 0-150.4-55.7-170.2-131.2C68.7 347.5 48 391.3 48 440v16c0 13.3-10.7 24-24 24s-24-10.7-24-24V440c0-75.1 38.3-141.2 96.4-179.9z"></path></svg></span><span>성장 로그</span></button></li><li aria-current="false" class="css-qvrrxd"><button type="button" aria-label="대본-라벨" class="css-1vt6fuy"><span><svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="closed-captioning" class="svg-inline--fa fa-closed-captioning " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" style="font-size: 16px; color: inherit;"><path fill="currentColor" d="M512 80c8.8 0 16 7.2 16 16V416c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V96c0-8.8 7.2-16 16-16H512zM64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H512c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zM200 208c14.2 0 27 6.1 35.8 16c8.8 9.9 24 10.7 33.9 1.9s10.7-24 1.9-33.9c-17.5-19.6-43.1-32-71.5-32c-53 0-96 43-96 96s43 96 96 96c28.4 0 54-12.4 71.5-32c8.8-9.9 8-25-1.9-33.9s-25-8-33.9 1.9c-8.8 9.9-21.6 16-35.8 16c-26.5 0-48-21.5-48-48s21.5-48 48-48zm144 48c0-26.5 21.5-48 48-48c14.2 0 27 6.1 35.8 16c8.8 9.9 24 10.7 33.9 1.9s10.7-24 1.9-33.9c-17.5-19.6-43.1-32-71.5-32c-53 0-96 43-96 96s43 96 96 96c28.4 0 54-12.4 71.5-32c8.8-9.9 8-25-1.9-33.9s-25-8-33.9 1.9c-8.8 9.9-21.6 16-35.8 16c-26.5 0-48-21.5-48-48z"></path></svg></span><span>스크립트</span></button></li></ul></div><aside class="react-draggable css-1d73h0e" style="transform: translate(480px, 0px);"></aside><aside class="react-draggable css-1d73h0e" style="transform: translate(480px, 0px);"></aside><aside class="react-draggable css-1gytd0p" style="transform: translate(480px, 0px);"></aside><aside class="react-draggable css-1d73h0e" style="transform: translate(480px, 0px);"></aside><aside class="react-draggable css-1gytd0p" style="transform: translate(480px, 0px);"></aside><aside class="react-draggable css-1d73h0e" style="transform: translate(480px, 0px);"></aside></div><script>window.env="production"</script><div data-focus-id="mantine-gaqq3bvyl" aria-hidden="true"><div dir="ltr"><div><div class="mantine-Modal-root mantine-yxmaw9"></div></div></div></div><iframe allow="join-ad-interest-group" data-tagging-id="AW-805475616/CU7DCNLk1rwDEKCqioAD" data-load-time="1707181284924" height="0" width="0" style="display: none; visibility: hidden;" src="./따라하며 배우는 HTML, CSS _ 학습 페이지_files/805475616.html" data-focus-id="mantine-gaqq3bvyl" aria-hidden="true"></iframe><div data-focus-id="mantine-gaqq3bvyl" aria-hidden="true"><div dir="ltr"><div class="mantine-1nlewoi" style="bottom: 0px;"><div></div></div></div></div>
+
+<script type="text/javascript" id="">var _AceGID=function(){var a="gtp9.acecounter.com 8080 AH4A45343888168 AW 0 NaPm,Ncisy ALL 0".split(" "),b=_AceGID?_AceGID.val:[],c=0,d=new Image(0,0);0>b.join(".").indexOf(a[3])&&(d.src="https://"+a[0]+"/?cookie",b.push(a),c=b.length);return{o:c,val:b}}(),_AceCounter=function(){var a=_AceGID,b=document.createElement("script"),c=document.getElementsByTagName("script")[0];if(0!=a.o){a=a.val[a.o-1];var d=a[0].substr(0,a[0].indexOf(".")),e="0"!=a[7]?a[2]:a[3],f=a[5].replace(/,/g,"_");b.src="https://cr.acecounter.com/Web/AceCounter_"+
+e+".js?gc\x3d"+a[2]+"\x26py\x3d"+a[4]+"\x26gd\x3d"+d+"\x26gp\x3d"+a[1]+"\x26up\x3d"+f+"\x26rd\x3d"+(new Date).getTime();c.parentNode.insertBefore(b,c);return b.src}}();</script>
+
+
+<script type="text/javascript" id="">!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("init","441896424280799");fbq("track","PageView");</script>
+<noscript data-focus-id="mantine-gaqq3bvyl" aria-hidden="true">
+  <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=441896424280799&amp;ev=PageView&amp;noscript=1">
+</noscript>
+<script type="text/javascript" id="" src="./따라하며 배우는 HTML, CSS _ 학습 페이지_files/wcslog.js"></script>
+<script type="text/javascript" id="">!function(d,e,f,a,b,c){d.twq||(a=d.twq=function(){a.exe?a.exe.apply(a,arguments):a.queue.push(arguments)},a.version="1.1",a.queue=[],b=e.createElement(f),b.async=!0,b.src="//static.ads-twitter.com/uwt.js",c=e.getElementsByTagName(f)[0],c.parentNode.insertBefore(b,c))}(window,document,"script");twq("init","o5gow");twq("track","PageView");</script>
+<script type="text/javascript" id="" charset="UTF-8" src="./따라하며 배우는 HTML, CSS _ 학습 페이지_files/kp.js"></script><script type="text/javascript" id="" src="./따라하며 배우는 HTML, CSS _ 학습 페이지_files/optimize.js"></script><script type="text/javascript" id="bdc-ipaddress-push">var hBDC=new XMLHttpRequest,bdcApi="https://api.bigdatacloud.net/data/client-ip",outputBDC={};hBDC.open("GET",bdcApi);hBDC.send();hBDC.onreadystatechange=function(){4==this.readyState&&200==this.status&&(outputBDC=JSON.parse(this.responseText),dataLayer.push({"bdc-ipaddress":outputBDC.ipString}))};</script><iframe allow="join-ad-interest-group" data-tagging-id="AW-805475616" data-load-time="1707181284937" height="0" width="0" style="display: none; visibility: hidden;" src="./따라하며 배우는 HTML, CSS _ 학습 페이지_files/805475616(1).html" data-focus-id="mantine-gaqq3bvyl" aria-hidden="true"></iframe><script type="text/javascript" id="">var parseQueryString=function(){var b=window.location.search,a={};b.replace(RegExp("([^?\x3d\x26]+)(\x3d([^\x26]*))?","g"),function(f,c,g,d){a[c]=d});return a},dr_event_type,dr_value,dr_items=[],item,url=window.location.href,pathname=window.location.pathname,param=window.location.search,businessType="education",isItem=/^\/course\//.test(pathname)&&!/\/course.*\/lecture/.test(pathname)&&!/\/course.*\/manage/.test(pathname)&&!/\/course.*\/dashboard/.test(pathname),isItemList=/^\/courses/.test(pathname)&&
+!parseQueryString().s,isSearch=/^\/courses/.test(pathname)&&!!parseQueryString().s,isBeforeCV=/carts/.test(pathname),isCV=/payments/.test(pathname),shouldSendDynxData=isItem||isItemList||isSearch||isBeforeCV||isCV;
+if(shouldSendDynxData){if(isSearch){dr_event_type="view_search_results";item=[];for(var e=document.querySelectorAll(".card.course.course_card_item"),i=0;i<e.length;i++)dr_items.push({id:JSON.parse(e[i].getAttribute("fxd-data")).course_id,google_business_vertical:businessType})}else if(isItem){var targetId=document.querySelector('meta[property\x3d"dable:item_id"]');dr_event_type="view_item";targetId&&(dr_items=[{id:targetId.content,google_business_vertical:businessType}]);dr_value=0}else if(isItemList)for(dr_event_type=
+"view_item_list",e=document.querySelectorAll(".card.course.course_card_item"),i=0;i<e.length;i++)dr_items.push({id:JSON.parse(e[i].getAttribute("fxd-data")).course_id,google_business_vertical:businessType});else if(isBeforeCV)for(dr_event_type="add_to_cart",item=[],e=document.querySelectorAll(".button.is-small.move_to_wish"),i=0;i<e.length;i++)dr_items.push({id:JSON.parse(e[i].getAttribute("fxd-data")).course_id,google_business_vertical:businessType}),dr_value=1;else if(isCV)for(dr_event_type="purchase",
+item=[],e=document.querySelectorAll(".product_item"),i=0;i<e.length;i++)dr_items.push({id:JSON.parse(e[i].getAttribute("fxd-data")).course_id,google_business_vertical:businessType});dataLayer.push({dr_event_type:dr_event_type,dr_value:dr_value,dr_items:dr_items,event:"dynamic_remarketing"})}else dataLayer.push({event:"remarketing"});</script><div data-focus-id="mantine-gaqq3bvyl" aria-hidden="true"><div dir="ltr"><div><div class="mantine-Modal-root mantine-yxmaw9"></div></div></div></div><div data-focus-id="mantine-gaqq3bvyl" aria-hidden="true"><div dir="ltr"><div><div class="mantine-Modal-root mantine-yxmaw9"></div></div></div></div><div data-focus-id="mantine-gaqq3bvyl" aria-hidden="true"><div dir="ltr"><div><div class="mantine-Modal-root mantine-yxmaw9"></div></div></div></div><script type="text/javascript" id="">if(!wcs_add)var wcs_add={};wcs_add.wa="s_5a2ed88c30a8";if(!_nasa)var _nasa={};window.wcs&&(wcs.inflow("www.inflearn.com"),wcs_do(_nasa));</script>
+<script type="text/javascript" id="">kakaoPixel&&kakaoPixel("4533976500237451452").pageView();</script><script type="text/javascript" id="">window.hj=window.hj||function(){(hj.q=hj.q||[]).push(arguments)};var uid=google_tag_manager["rm"]["8964582"](20)||null;window.hj("identify",uid,{});</script><iframe id="_hjSafeContext_25107044" title="_hjSafeContext" tabindex="-1" src="./따라하며 배우는 HTML, CSS _ 학습 페이지_files/saved_resource.html" style="display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;" data-focus-id="mantine-gaqq3bvyl" aria-hidden="true"></iframe><img src="./따라하며 배우는 HTML, CSS _ 학습 페이지_files/adsct" height="1" width="1" style="display: none;" data-focus-id="mantine-gaqq3bvyl" aria-hidden="true"><img src="./따라하며 배우는 HTML, CSS _ 학습 페이지_files/adsct(1)" height="1" width="1" style="display: none;" data-focus-id="mantine-gaqq3bvyl" aria-hidden="true"></body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+      div.grammarly-desktop-integration {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select:none;
+        user-select:none;
+      }
+
+      div.grammarly-desktop-integration:before {
+        content: attr(data-content);
+      }
+    </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{&quot;mode&quot;:&quot;full&quot;,&quot;isActive&quot;:true,&quot;isUserDisabled&quot;:false}"></div></template></grammarly-desktop-integration></html>

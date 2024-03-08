@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      dialog {
+        margin-top: 100px;
+        background: lightblue;
+      }
+      dialog::backdrop {
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+    </style>
+  </head>
+  <body>
+    <button class="modal1">none-modal dialog 열기</button>
+    <button class="modal2">modal 열기</button>
+
+    <dialog>
+      <span>안녕하세요</span>
+    </dialog>
+
+    <script>
+      const dialog = document.querySelector("dialog");
+      const button1 = document.querySelector(".modal1");
+      const button2 = document.querySelector(".modal2");
+
+      button1.addEventListener("click", () => {
+        dialog.show();
+      });
+
+      button2.addEventListener("click", () => {
+        dialog.showModal();
+        //dialog.close();
+      });
+    </script>
+  </body>
+</html>

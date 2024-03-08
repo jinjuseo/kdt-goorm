@@ -1,0 +1,106 @@
+.images {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  align-items: center;
+  column-gap: 8px;
+}
+.image {
+  width: 210px;
+  height: 210px;
+  /* display: flex; */
+  /* width: 300px; */
+}
+.box {
+  width: 200px;
+  height: 200px;
+  border: 2px solid lightgray;
+}
+.box img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.image .name {
+  position: relative;
+  /* right: 200px; */
+  bottom: 200px;
+  color: pink;
+  font-weight: 700;
+  z-index: 12;
+}
+.image .remove {
+  position: relative;
+  z-index: 12;
+  bottom: 240px;
+  left: 180px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  border: none;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 700;
+  background-color: pink;
+  border-radius: 100%;
+  cursor: pointer;
+}
+
+.confirm {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.body {
+  width: 260px;
+  height: 130px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 16px;
+  border-radius: 8px;
+}
+.msg {
+  font-weight: 600;
+}
+.buttons {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  column-gap: 32px;
+}
+.buttons button {
+  border-radius: 4px;
+  padding: 8px 12px;
+  border: none;
+  cursor: pointer;
+}
+.ok {
+  background-color: black;
+  color: white;
+}
+.cancel {
+  background-color: lightgray;
+}
+
+.fade {
+  opacity: 0;
+}
+.fade-in {
+  opacity: 1;
+  transition: opacity 0.5s;
+}

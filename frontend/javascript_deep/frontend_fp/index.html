@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://unpkg.com/fxjs/dist/fx.js"></script>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    ## 프론트엔드에서 함수형/이터러블/동시성프로그래밍
+    <script>
+      //https://github.com/marpple/FxJS
+      const { L, C } = window._;
+    </script>
+    <br /><br />
+    1. ES6 템플릿 리터럴 활용
+    <script>
+      const a = 10;
+      const b = 5;
+      //   console.log(`${a} + ${b} = ${a + b}`);
+      //   console.clear();
+    </script>
+    <br /><br />
+
+    <script>
+      const $ = {};
+
+      $.qs = (sel, parent = document) => parent.querySelector(sel);
+      $.qsa = (sel, parent = document) => parent.querySelectorAll(sel);
+
+      $.find = _.curry($.qs);
+      $.findAll = _.curry($.qsa);
+
+      $.el = (html) => {
+        const wrap = document.createElement("div");
+        wrap.innerHTML = html;
+        return wrap.children[0];
+      };
+
+      $.append = _.curry((parent, child) => {
+        parent.appendChild(child);
+      });
+
+      $.closest = _.curry((sel, el) => el.closest(sel));
+
+      $.remove = (el) => el.parentNode.removeChild(el);
+
+      $.on = (event, f) => (els) =>
+        _.each(
+          (el) => el.addEventListener(event, f),
+          _.isIterable(els) ? els : [els]
+        );
+
+      $.addClass = _.curry((name, el) => el.classList.add(name));
+    </script>
+    2. 이미지 목록 그리기
+    <script></script>
+    <br /><br />
+    3. 경고창 만들기 - confirm - Promise 활용 - alert - 중복 제거
+    <script>
+      const Ui = {};
+      Ui.message = _.curry(
+        (btns, msg) =>
+          new Promise((resolve) =>
+            _.go(
+              `
+          <div class="confirm">
+              <div class="body">
+                  <div class="msg">${msg}</div>
+                  <div class="buttons">
+                      ${_.strMap(
+                        (btn) => `
+                          <button type="button" class="${btn.type}">${btn.name}</button>
+                          `,
+                        btns
+                      )}
+                  </div>
+              </div>
+          </div>
+      `,
+              $.el,
+              $.append($.qs("body")),
+              ..._.map(
+                (btn) =>
+                  _.tap(
+                    $.find(`.${btn.type}`),
+                    $.on("click", (e) =>
+                      _.go(
+                        e.currentTarget,
+                        $.closest(".confirm"),
+                        $.remove,
+                        (_) => resolve(btn.value)
+                      )
+                    )
+                  ),
+                btns
+              )
+            )
+          )
+      );
+      Ui.confirm = Ui.message([
+        { name: "취소", type: "cancel", value: false },
+        { name: "확인", type: "ok", value: true },
+      ]);
+
+      Ui.alert = Ui.message([
+        {
+          name: "확인",
+          type: "ok",
+          value: true,
+        },
+      ]);
+
+      Ui.remover = (btnSel, targetSel, before = (a) => a, after = (a) => a) =>
+        _.tap(
+          $.findAll(btnSel),
+          $.on("click", async ({ currentTarget: ct }) => {
+            (await Ui.confirm("정말 삭제하시겠습니까?")) &&
+              _.go(
+                ct,
+                $.closest(targetSel),
+                _.tap(before),
+                $.remove,
+                _.tap(after)
+              );
+          })
+        );
+      //   Ui.confirm("삭제하시겠습니까?");
+      //   Ui.alert("삭제했습니다");
+    </script>
+    <br /><br />
+    4. 이미지 동시성 다루기
+    <script>
+      //이미지가 한번에 그려지도록 (해상도가 달라도)
+      const Images = {}; //대문자를 쓰면 클래스를 의미하는 네이밍컨벤션 (보통)
+
+      Images.fetch = () =>
+        new Promise((resolve) =>
+          setTimeout(
+            () =>
+              resolve([
+                {
+                  name: "대상혁1",
+                  url: "https://i.pinimg.com/564x/1c/c0/51/1cc051bf4212ce7d31dd64c1991bb284.jpg",
+                },
+                {
+                  name: "대상혁2",
+                  url: "https://i.pinimg.com/736x/69/b8/48/69b848e059ae8f0f5b97287888d11351.jpg",
+                },
+                {
+                  name: "대상혁3",
+                  url: "https://i.pinimg.com/564x/82/58/e1/8258e1ce9614c274192bfe6d800bc118.jpg",
+                },
+
+                {
+                  name: "대상혁4",
+                  url: "https://i.pinimg.com/236x/28/33/4a/28334a5d7dc41f4dc2e3777887edcb84.jpg",
+                },
+
+                {
+                  name: "대상혁5",
+                  url: "https://i.pinimg.com/236x/c5/f4/20/c5f4204bdbd8a4ffd0e546d7ccf359d9.jpg",
+                },
+
+                {
+                  name: "대상혁6",
+                  url: "https://i.pinimg.com/236x/7d/98/99/7d9899517d3f768d7f7388d0cabfdf38.jpg",
+                },
+                {
+                  name: "대상혁7",
+                  url: "https://i.pinimg.com/236x/58/da/06/58da0660eb208a040cc7a9f443e6d2b8.jpg",
+                },
+                {
+                  name: "대상혁8",
+                  url: "https://i.pinimg.com/236x/56/43/a2/5643a2712d74d9ce9e6260bf06208ae4.jpg",
+                },
+                {
+                  name: "대상혁9",
+                  url: "https://i.pinimg.com/236x/69/b8/48/69b848e059ae8f0f5b97287888d11351.jpg",
+                },
+                {
+                  name: "대상혁10",
+                  url: "https://i.pinimg.com/236x/7d/98/99/7d9899517d3f768d7f7388d0cabfdf38.jpg",
+                },
+                {
+                  name: "대상혁11",
+                  url: "https://i.pinimg.com/236x/43/7b/df/437bdf26951014fb45717c3a205c58ae.jpg",
+                },
+              ]),
+            200
+          )
+        );
+
+      const string = (iter) => _.reduce((a, b) => `${a}${b}`, iter);
+
+      _.strMap = _.curry(_.pipe(L.map, string));
+
+      Images.tmpl = (imgs) => `
+      <div class="images">
+          ${_.strMap(
+            (img) => `
+              <div class="image">
+                  <div class="box"><img src="" lazy-src="${img.url}" class="fade" alt=""></div>
+                  <div class="name">${img.name}</div>
+                  <button class="remove">X</button>
+              </div>
+              `,
+            imgs
+          )}
+      </div>
+      `;
+
+      Images.loader = (limit) =>
+        _.tap(
+          $.findAll("img"),
+          L.map(
+            (img) => (_) =>
+              new Promise((resolve) => {
+                img.onload = () => resolve(img);
+                img.src = img.getAttribute("lazy-src");
+              })
+          ),
+          C.takeAllWithLimit(limit),
+          _.each(_.each($.addClass("fade-in")))
+        );
+
+      _.groupBySize = _.curry((size, iter) => {
+        let r = L.range(Infinity);
+        return _.groupBy((_) => Math.floor(r.next().value / size), iter);
+      });
+
+      C.takeAllWithLimit = _.curry((limit = Infinity, iter) => {
+        let r = L.range(Infinity);
+        return _.go(
+          iter,
+          _.groupBySize(limit),
+          L.values,
+          L.map(L.map((f) => f())),
+          L.map(C.takeAll)
+        );
+      });
+
+      _.go(
+        Images.fetch(),
+        Images.tmpl,
+        $.el,
+        $.append($.qs("body")),
+        Ui.remover(
+          ".remove",
+          ".image",
+          (_) => console.log("서버통신!"),
+          console.log
+        ),
+        Images.loader(1)
+      );
+    </script>
+    <br /><br />
+    5. 페이지 띄우기
+    <script></script>
+  </body>
+</html>
