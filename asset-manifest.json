@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/kdt-goorm-studies/tree/main/frontend/React/react-netflix-app/static/css/main.e988ebbf.css",
-    "main.js": "/kdt-goorm-studies/tree/main/frontend/React/react-netflix-app/static/js/main.43491cee.js",
-    "static/js/453.5af2b189.chunk.js": "/kdt-goorm-studies/tree/main/frontend/React/react-netflix-app/static/js/453.5af2b189.chunk.js",
-    "index.html": "/kdt-goorm-studies/tree/main/frontend/React/react-netflix-app/index.html",
-    "main.e988ebbf.css.map": "/kdt-goorm-studies/tree/main/frontend/React/react-netflix-app/static/css/main.e988ebbf.css.map",
-    "main.43491cee.js.map": "/kdt-goorm-studies/tree/main/frontend/React/react-netflix-app/static/js/main.43491cee.js.map",
-    "453.5af2b189.chunk.js.map": "/kdt-goorm-studies/tree/main/frontend/React/react-netflix-app/static/js/453.5af2b189.chunk.js.map"
+    "main.css": "/react-netflix-app/static/css/main.e988ebbf.css",
+    "main.js": "/react-netflix-app/static/js/main.85765296.js",
+    "static/js/453.5af2b189.chunk.js": "/react-netflix-app/static/js/453.5af2b189.chunk.js",
+    "index.html": "/react-netflix-app/index.html",
+    "main.e988ebbf.css.map": "/react-netflix-app/static/css/main.e988ebbf.css.map",
+    "main.85765296.js.map": "/react-netflix-app/static/js/main.85765296.js.map",
+    "453.5af2b189.chunk.js.map": "/react-netflix-app/static/js/453.5af2b189.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e988ebbf.css",
-    "static/js/main.43491cee.js"
+    "static/js/main.85765296.js"
   ]
 }
