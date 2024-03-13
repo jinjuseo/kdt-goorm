@@ -30,10 +30,7 @@
   border-radius: 8px;
   transition: all 400ms ease-in-out 2s;
   animation: fadeIn 400ms;
-  .modal__poster-img {
-    width: 100%;
-    height: auto;
-  }
+
   .modal__content {
     padding: 40px;
     color: white;
@@ -99,4 +96,8 @@
     opacity: 1;
     transform: scale(1);
   }
+}
+.modal__poster-img {
+  width: 100%;
+  height: auto;
 }

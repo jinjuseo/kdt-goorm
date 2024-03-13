@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useRef } from "react";
 import "./movieModal.scss";
+import useOnClickOutside from "../../hooks/useOnClickOutside";
 //row중 movie item 클릭시 보이는 모달
 const MovieModal = ({
   backdrop_path,
@@ -12,10 +13,14 @@ const MovieModal = ({
   setModalOpen,
   base_url,
 }) => {
+  const ref = useRef();
+  useOnClickOutside(ref, () => {
+    setModalOpen(false);
+  });
   return (
     <div className="presentation" role="presentation">
       <div className="wrapper-modal">
-        <div className="modal">
+        <div className="modal" ref={ref}>
           <span
             onClick={() => {
               setModalOpen(false);

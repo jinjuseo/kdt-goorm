@@ -26,6 +26,24 @@
     // height: 100%;
     object-fit: contain;
   }
+  .nav__input {
+    width: 200px;
+    height: 20px;
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background-color: rgba(0, 0, 0, 0.582);
+    border-radius: 4px;
+    color: c.$C_WHITE;
+    padding: 4px;
+    border: none;
+    &:focus {
+      outline: none;
+      border: 1px solid c.$C_WHITE;
+      // outline-width: 1px;
+      // outline-color: c.$C_WHITE;
+    }
+  }
 }
 .nav__black {
   background-color: c.$C_BLACK;

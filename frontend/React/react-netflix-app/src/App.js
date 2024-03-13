@@ -2,32 +2,27 @@ import "./styles/global.scss";
 import "./App.scss";
 import { Nav, Banner, Row, Footer } from "./components";
 import requests from "./api/requests";
-const height = { height: "300vh" };
-function App() {
+import { Route, Routes, Outlet } from "react-router-dom";
+import { MainPage, DetailPage, SearchPage } from "./pages";
+
+const Layout = () => {
   return (
-    <div className="App" style={height}>
+    <div className="App">
       <Nav />
-      <Banner />
-      <Row
-        title="NETFILX ORIGINALS"
-        id="NO"
-        fetchUrl={requests.fetchNetflixOriginals}
-        isLargeRow
-      />
-      <Row title="Trending Now" id="TN" fetchUrl={requests.fetchTrending} />
-      <Row title="Top Rated" id="TR" fetchUrl={requests.fetchTopRated} />
-      <Row
-        title="Action Movies"
-        id="AM"
-        fetchUrl={requests.fetchActionMovies}
-      />
-      <Row
-        title="Comedy Movies"
-        id="CM"
-        fetchUrl={requests.fetchComedyMovies}
-      />
+      <Outlet />
       <Footer />
     </div>
+  );
+};
+function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<MainPage />} />
+        <Route path=":movieId" element={<DetailPage />} />
+        <Route path="search" element={<SearchPage />} />
+      </Route>
+    </Routes>
   );
 }
 
