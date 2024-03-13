@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/frontend/React/react-netflix-app/static/css/main.e988ebbf.css",
+    "main.js": "/frontend/React/react-netflix-app/static/js/main.2ce33b59.js",
+    "static/js/453.5af2b189.chunk.js": "/frontend/React/react-netflix-app/static/js/453.5af2b189.chunk.js",
+    "index.html": "/frontend/React/react-netflix-app/index.html",
+    "main.e988ebbf.css.map": "/frontend/React/react-netflix-app/static/css/main.e988ebbf.css.map",
+    "main.2ce33b59.js.map": "/frontend/React/react-netflix-app/static/js/main.2ce33b59.js.map",
+    "453.5af2b189.chunk.js.map": "/frontend/React/react-netflix-app/static/js/453.5af2b189.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e988ebbf.css",
+    "static/js/main.2ce33b59.js"
+  ]
+}
