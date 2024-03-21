@@ -2,7 +2,7 @@
   "name": "react-netflix-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://jinjuseo.github.io/frontend/React/react-netflix-app",
+  "homepage": "https://jinjuseo.github.io/react-netflix-app",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
