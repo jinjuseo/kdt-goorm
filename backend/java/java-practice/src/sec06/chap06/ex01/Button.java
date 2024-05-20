@@ -1,4 +1,4 @@
-package sec06.chap06;
+package sec06.chap06.ex01;
 
 public class Button {
     private ButtonMode buttonMode = ButtonMode.LIGHT;

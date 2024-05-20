@@ -1,2 +1,4 @@
-package sec06.chap02.pkg3;public class Cls2 {
+package sec06.chap02.pkg3;
+
+public class Cls2 {
 }

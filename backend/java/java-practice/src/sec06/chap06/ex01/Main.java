@@ -1,4 +1,8 @@
-package sec06.chap06;
+package sec06.chap06.ex01;
+
+import sec06.chap06.ex01.Button;
+import sec06.chap06.ex01.ButtonMode;
+import sec06.chap06.ex01.ButtonSpace;
 
 public class Main {
     public static void main(String[] args) {

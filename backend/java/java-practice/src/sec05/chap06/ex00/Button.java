@@ -1,4 +1,4 @@
-package sec05.chap06.ex01;
+package sec05.chap06.ex00;
 
 public class Button {
     private String print;

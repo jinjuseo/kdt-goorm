@@ -1,4 +1,4 @@
-package sec05.chap05.ex01;
+package sec05.chap06.ex01;
 
 public class YalcoChickenDT extends YalcoChicken {
     private boolean driveThruOpen = true;
